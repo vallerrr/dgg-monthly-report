@@ -96,7 +96,7 @@ select {
 
 .chart-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -104,6 +104,21 @@ select {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 15px;
+}
+
+.chart-grid .card {
+  min-height: 280px;
+}
+
+.chart-grid canvas {
+  width: 100% !important;
+  height: 210px !important;
+}
+
+@media (max-width: 1100px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 table {
