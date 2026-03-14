@@ -1,0 +1,23 @@
+{
+  "generated_at_utc": "1970-01-01T00:00:00+00:00",
+  "selected_month": {
+    "year": 1970,
+    "month": 1,
+    "label": "1970-01"
+  },
+  "threshold": 0.2,
+  "outcome_filter": "all",
+  "months": [],
+  "summary": {
+    "year": 1970,
+    "month": 1,
+    "unique_units": 0,
+    "missed_units": 0,
+    "missed_unit_names": [],
+    "threshold": 0.2,
+    "outcomes": [],
+    "outcome_filter": "all"
+  },
+  "rows": [],
+  "row_count": 0
+}
