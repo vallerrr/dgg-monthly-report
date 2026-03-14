@@ -47,9 +47,9 @@
       </table>
     </section>
 
-    <section class="detail-panel">
+    <section class="detail-panel" id="detail-panel">
       <h2>Data Display Options</h2>
-      <p class="muted">Inspect trends and current-month raw FB data for a selected GID + outcome.</p>
+      <p class="muted">Click a GID in the table to open its trends and current-month raw FB data.</p>
 
       <div class="controls">
         <label>
@@ -58,6 +58,7 @@
         </label>
       </div>
 
+      <div id="detail-content" class="hidden">
       <div class="chart-grid">
         <article class="card">
           <h3>Predicted Trend (12m + current)</h3>
@@ -71,6 +72,7 @@
           <h3>Current Month Raw FB (daily)</h3>
           <canvas id="raw-chart" height="120"></canvas>
         </article>
+      </div>
       </div>
     </section>
 

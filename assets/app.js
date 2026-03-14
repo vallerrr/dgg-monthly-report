@@ -5,6 +5,15 @@ let predChart = null;
 let avgChart = null;
 let rawChart = null;
 
+function esc(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
 function toNumber(value, fallback = 0) {
   const n = Number(value);
   return Number.isFinite(n) ? n : fallback;
@@ -68,10 +77,15 @@ function renderTable() {
   table.innerHTML = filtered
     .map((row) => {
       const pct = toNumber(row.percent_change, 0);
+      const detailKey = `${row.gid_1}||${row.outcome}`;
+      const hasDetail = Boolean(detailSeries[detailKey]);
+      const gidCell = hasDetail
+        ? `<a href="#detail-panel" class="gadm-link" data-detail-key="${esc(detailKey)}">${esc(row.gid_1)}</a>`
+        : esc(row.gid_1);
       return `
         <tr>
-          <td>${row.gid_1}</td>
-          <td>${row.outcome}</td>
+          <td>${gidCell}</td>
+          <td>${esc(row.outcome)}</td>
           <td>${fmt(row.predicted_current)}</td>
           <td>${fmt(row.predicted_avg)}</td>
           <td>${fmt(row.predicted_change)}</td>
@@ -93,6 +107,23 @@ function bindControls() {
   const detailKey = document.getElementById("detail-key");
   detailKey.addEventListener("input", renderDetail);
   detailKey.addEventListener("change", renderDetail);
+
+  const table = document.getElementById("rows-table");
+  table.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    const link = target.closest("[data-detail-key]");
+    if (!link) return;
+    event.preventDefault();
+
+    const key = link.getAttribute("data-detail-key") || "";
+    const select = document.getElementById("detail-key");
+    if (!key || !detailSeries[key]) return;
+
+    select.value = key;
+    renderDetail();
+    document.getElementById("detail-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 function renderFooter() {
@@ -157,12 +188,12 @@ function populateDetailSelector() {
     return;
   }
 
-  select.innerHTML = keys
-    .map((key) => {
-      const item = detailSeries[key];
-      return `<option value="${key}">${item.gid_1} | ${item.outcome}</option>`;
-    })
-    .join("");
+  const options = ['<option value="">Select from table or dropdown...</option>'];
+  keys.forEach((key) => {
+    const item = detailSeries[key];
+    options.push(`<option value="${esc(key)}">${esc(item.gid_1)} | ${esc(item.outcome)}</option>`);
+  });
+  select.innerHTML = options.join("");
 }
 
 function renderDetail() {
@@ -170,12 +201,17 @@ function renderDetail() {
   const key = select.value;
   const item = detailSeries[key];
 
+  const detailContent = document.getElementById("detail-content");
+
   if (!item) {
+    detailContent?.classList.add("hidden");
     predChart = upsertLineChart(predChart, "pred-chart", [], [], chartOptions(0, 1));
     avgChart = upsertLineChart(avgChart, "avg-chart", [], [], chartOptions(0, null));
     rawChart = upsertLineChart(rawChart, "raw-chart", [], [], chartOptions(0, null));
     return;
   }
+
+  detailContent?.classList.remove("hidden");
 
   const pred = item.prediction || {};
   predChart = upsertLineChart(
