@@ -1,5 +1,9 @@
 let payload = null;
 let rows = [];
+let detailSeries = {};
+let predChart = null;
+let avgChart = null;
+let rawChart = null;
 
 function toNumber(value, fallback = 0) {
   const n = Number(value);
@@ -19,6 +23,7 @@ function renderCards() {
     { label: "Rows Exported", value: String(payload?.row_count || 0) },
     { label: "Unique Units", value: String(summary.unique_units || 0) },
     { label: "Missed Units", value: String(summary.missed_units || 0) },
+    { label: "Detail Series", value: String(payload?.detail_count || 0) },
   ];
 
   const container = document.getElementById("summary-cards");
@@ -84,12 +89,136 @@ function bindControls() {
     element.addEventListener("input", renderTable);
     element.addEventListener("change", renderTable);
   });
+
+  const detailKey = document.getElementById("detail-key");
+  detailKey.addEventListener("input", renderDetail);
+  detailKey.addEventListener("change", renderDetail);
 }
 
 function renderFooter() {
   const footer = document.getElementById("footer-meta");
   const generated = payload?.generated_at_utc || "unknown";
-  footer.textContent = `Generated UTC: ${generated}`;
+  const detailType = payload?.detail_data_type || "unknown";
+  footer.textContent = `Generated UTC: ${generated} | Detail FB data type: ${detailType}`;
+}
+
+function toPointList(labels, values) {
+  if (!Array.isArray(labels) || !Array.isArray(values)) return [];
+  return labels.map((label, idx) => ({ x: label, y: toNumber(values[idx], 0) }));
+}
+
+function chartOptions(yMin = 0, yMax = null) {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true,
+        min: yMin,
+        ...(yMax === null ? {} : { max: yMax }),
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+      },
+    },
+  };
+}
+
+function upsertLineChart(existingChart, canvasId, labels, datasets, options) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return existingChart;
+
+  const cfg = {
+    type: "line",
+    data: {
+      labels,
+      datasets,
+    },
+    options,
+  };
+
+  if (existingChart) {
+    existingChart.data = cfg.data;
+    existingChart.options = cfg.options;
+    existingChart.update();
+    return existingChart;
+  }
+
+  return new Chart(canvas.getContext("2d"), cfg);
+}
+
+function populateDetailSelector() {
+  const select = document.getElementById("detail-key");
+  const keys = Object.keys(detailSeries).sort();
+  if (!keys.length) {
+    select.innerHTML = '<option value="">No detail series available</option>';
+    return;
+  }
+
+  select.innerHTML = keys
+    .map((key) => {
+      const item = detailSeries[key];
+      return `<option value="${key}">${item.gid_1} | ${item.outcome}</option>`;
+    })
+    .join("");
+}
+
+function renderDetail() {
+  const select = document.getElementById("detail-key");
+  const key = select.value;
+  const item = detailSeries[key];
+
+  if (!item) {
+    predChart = upsertLineChart(predChart, "pred-chart", [], [], chartOptions(0, 1));
+    avgChart = upsertLineChart(avgChart, "avg-chart", [], [], chartOptions(0, null));
+    rawChart = upsertLineChart(rawChart, "raw-chart", [], [], chartOptions(0, null));
+    return;
+  }
+
+  const pred = item.prediction || {};
+  predChart = upsertLineChart(
+    predChart,
+    "pred-chart",
+    pred.labels || [],
+    [
+      {
+        label: "Predicted",
+        data: pred.values || [],
+        borderColor: "#2f6feb",
+        pointBackgroundColor: pred.point_colors || [],
+        tension: 0.15,
+      },
+    ],
+    chartOptions(0, 1),
+  );
+
+  const avg = item.averaged_fb || {};
+  avgChart = upsertLineChart(
+    avgChart,
+    "avg-chart",
+    avg.labels || [],
+    [
+      { label: "All", data: avg.all || [], borderColor: "#1f77b4", tension: 0.15 },
+      { label: "Men", data: avg.men || [], borderColor: "#2ca02c", tension: 0.15 },
+      { label: "Women", data: avg.women || [], borderColor: "#d62728", tension: 0.15 },
+    ],
+    chartOptions(0, null),
+  );
+
+  const raw = item.raw_fb || {};
+  rawChart = upsertLineChart(
+    rawChart,
+    "raw-chart",
+    raw.labels || [],
+    [
+      { label: "All", data: raw.all || [], borderColor: "#1f77b4", tension: 0.15 },
+      { label: "Men", data: raw.men || [], borderColor: "#2ca02c", tension: 0.15 },
+      { label: "Women", data: raw.women || [], borderColor: "#d62728", tension: 0.15 },
+    ],
+    chartOptions(0, null),
+  );
 }
 
 async function init() {
@@ -100,11 +229,14 @@ async function init() {
 
   payload = await response.json();
   rows = payload?.rows || [];
+  detailSeries = payload?.detail_series || {};
 
   renderCards();
   populateOutcomeFilter();
+  populateDetailSelector();
   bindControls();
   renderTable();
+  renderDetail();
   renderFooter();
 }
 

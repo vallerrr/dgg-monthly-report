@@ -7,6 +7,7 @@ This folder is a standalone static dashboard that can be moved to its own GitHub
 - No Python/runtime required for viewers.
 - Public URL via GitHub Pages.
 - Monthly update is just replacing one JSON file (`data/latest.json`).
+- Includes interactive detail views: predicted trend, averaged FB trend, and current-month raw FB daily trend.
 
 ## 1) Create a separate repository
 
@@ -33,7 +34,11 @@ Then in GitHub repo settings:
 
 Your site URL will be:
 
-- `https://<YOUR_ORG_OR_USER>.github.io/dgg-monthly-report/`
+- `https://vallerrr.github.io/dgg-monthly-report/`
+
+Example for user `vallerrr`:
+
+- `https://vallerrr.github.io/dgg-monthly-report/`
 
 ## 2) Monthly update (from pipeline repo)
 
@@ -42,6 +47,33 @@ From this repository root (`dgg_pipeline`), run:
 ```bash
 python -m src.report_web.export_static_payload --output report_web_pages_project/data/latest.json
 ```
+
+Or use the one-command helper (exports + copies to sibling repo):
+
+```bash
+bash update_monthly_report_pages.sh
+```
+
+Auto-commit and push to GitHub in one go:
+
+```bash
+bash update_monthly_report_pages.sh --push
+```
+
+Optional month override:
+
+```bash
+bash update_monthly_report_pages.sh --year 2026 --month 2 --push
+```
+
+Optional detail payload controls:
+
+```bash
+bash update_monthly_report_pages.sh --data-type both --max-detail-pairs 500 --push
+```
+
+- `--data-type`: `fb_key` (default), `tessellated`, or `both`
+- `--max-detail-pairs`: how many GID+outcome detail series to include in `latest.json`
 
 Then copy the new `data/latest.json` into the separate Pages repo and push:
 
@@ -64,4 +96,4 @@ python -m src.report_web.export_static_payload --year 2026 --month 2 --output re
 ## Notes
 
 - This static site currently hosts the monthly summary table (the fastest Pages-compatible version).
-- If you want full drill-down charts per GADM in Pages, we can extend the exporter to include those series too.
+- It now also includes drill-down charts for available GID+outcome pairs in the exported detail payload.

@@ -47,9 +47,37 @@
       </table>
     </section>
 
+    <section class="detail-panel">
+      <h2>Data Display Options</h2>
+      <p class="muted">Inspect trends and current-month raw FB data for a selected GID + outcome.</p>
+
+      <div class="controls">
+        <label>
+          GID + Outcome
+          <select id="detail-key"></select>
+        </label>
+      </div>
+
+      <div class="chart-grid">
+        <article class="card">
+          <h3>Predicted Trend (12m + current)</h3>
+          <canvas id="pred-chart" height="120"></canvas>
+        </article>
+        <article class="card">
+          <h3>Averaged FB Trend (last 12 months)</h3>
+          <canvas id="avg-chart" height="120"></canvas>
+        </article>
+        <article class="card">
+          <h3>Current Month Raw FB (daily)</h3>
+          <canvas id="raw-chart" height="120"></canvas>
+        </article>
+      </div>
+    </section>
+
     <footer class="footer" id="footer-meta"></footer>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>

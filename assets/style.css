@@ -86,6 +86,26 @@ select {
   border-radius: 10px;
 }
 
+.detail-panel {
+  margin-top: 18px;
+}
+
+.detail-panel h2 {
+  margin-bottom: 0;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
