@@ -1,23 +1,1291 @@
 {
-  "generated_at_utc": "1970-01-01T00:00:00+00:00",
+  "generated_at_utc": "2026-03-14T20:05:22.397335+00:00",
   "selected_month": {
-    "year": 1970,
-    "month": 1,
-    "label": "1970-01"
+    "year": 2026,
+    "month": 2,
+    "label": "2026-02"
   },
   "threshold": 0.2,
   "outcome_filter": "all",
-  "months": [],
+  "months": [
+    {
+      "year": 2026,
+      "month": 2,
+      "label": "2026-02"
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "label": "2026-01"
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "label": "2025-12"
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "label": "2025-11"
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "label": "2025-10"
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "label": "2025-09"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "label": "2025-08"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "label": "2025-07"
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "label": "2025-06"
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "label": "2025-05"
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "label": "2025-04"
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "label": "2025-03"
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "label": "2025-02"
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "label": "2025-01"
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "label": "2024-12"
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "label": "2024-11"
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "label": "2024-10"
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "label": "2024-09"
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "label": "2024-08"
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "label": "2024-07"
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "label": "2024-06"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "label": "2024-05"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "label": "2024-04"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "label": "2024-03"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "label": "2024-02"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "label": "2024-01"
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "label": "2023-01"
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "label": "2022-01"
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "label": "2021-01"
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "label": "2020-01"
+    },
+    {
+      "year": 2019,
+      "month": 1,
+      "label": "2019-01"
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "label": "2018-01"
+    },
+    {
+      "year": 2017,
+      "month": 1,
+      "label": "2017-01"
+    },
+    {
+      "year": 2016,
+      "month": 1,
+      "label": "2016-01"
+    },
+    {
+      "year": 2015,
+      "month": 1,
+      "label": "2015-01"
+    }
+  ],
   "summary": {
-    "year": 1970,
-    "month": 1,
-    "unique_units": 0,
-    "missed_units": 0,
-    "missed_unit_names": [],
+    "year": 2026,
+    "month": 2,
+    "unique_units": 2063,
+    "missed_units": 12,
+    "missed_unit_names": [
+      "CAF.11_1",
+      "CAF.17_1",
+      "COD.20_1",
+      "KAZ.3_1",
+      "KEN.24_1",
+      "LBY.21_1",
+      "NIC.1_1",
+      "SSD.2_1",
+      "TZA.11_1",
+      "TZA.24_1",
+      "VNM.19_1",
+      "VNM.27_1"
+    ],
     "threshold": 0.2,
-    "outcomes": [],
+    "outcomes": [
+      "internet_fm_ratio",
+      "internet_men",
+      "internet_women",
+      "mobile_fm_ratio",
+      "mobile_men",
+      "mobile_women"
+    ],
     "outcome_filter": "all"
   },
-  "rows": [],
-  "row_count": 0
+  "rows": [
+    {
+      "gid_1": "ZMB.6_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.574,
+      "predicted_avg": 0.2406,
+      "predicted_change": 0.3334,
+      "percent_change": 138.55,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "LBR.13_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.359,
+      "predicted_avg": 0.1508,
+      "predicted_change": 0.2082,
+      "percent_change": 138.11,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "LBR.13_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 1.0,
+      "predicted_avg": 0.439,
+      "predicted_change": 0.561,
+      "percent_change": 127.79,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "AFG.24_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.266,
+      "predicted_avg": 0.1373,
+      "predicted_change": 0.1287,
+      "percent_change": 93.72,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "COD.26_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.373,
+      "predicted_avg": 0.1982,
+      "predicted_change": 0.1748,
+      "percent_change": 88.16,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.14_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.397,
+      "predicted_avg": 0.2256,
+      "predicted_change": 0.1714,
+      "percent_change": 75.96,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.12_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.388,
+      "predicted_avg": 0.2214,
+      "predicted_change": 0.1666,
+      "percent_change": 75.26,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "COD.23_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.412,
+      "predicted_avg": 0.2402,
+      "predicted_change": 0.1718,
+      "percent_change": 71.56,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.18_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.429,
+      "predicted_avg": 0.2562,
+      "predicted_change": 0.1728,
+      "percent_change": 67.48,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.9_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.343,
+      "predicted_avg": 0.2069,
+      "predicted_change": 0.1361,
+      "percent_change": 65.76,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.2_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.412,
+      "predicted_avg": 0.2514,
+      "predicted_change": 0.1606,
+      "percent_change": 63.89,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "ZMB.6_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.534,
+      "predicted_avg": 0.3313,
+      "predicted_change": 0.2027,
+      "percent_change": 61.18,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "COD.13_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.431,
+      "predicted_avg": 0.2689,
+      "predicted_change": 0.1621,
+      "percent_change": 60.27,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "LBR.13_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.455,
+      "predicted_avg": 0.2843,
+      "predicted_change": 0.1707,
+      "percent_change": 60.04,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "ZMB.6_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.891,
+      "predicted_avg": 0.5598,
+      "predicted_change": 0.3312,
+      "percent_change": 59.17,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "COD.7_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.338,
+      "predicted_avg": 0.2125,
+      "predicted_change": 0.1255,
+      "percent_change": 59.09,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.1_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.427,
+      "predicted_avg": 0.2692,
+      "predicted_change": 0.1578,
+      "percent_change": 58.65,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.8_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.391,
+      "predicted_avg": 0.2521,
+      "predicted_change": 0.1389,
+      "percent_change": 55.11,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.17_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.364,
+      "predicted_avg": 0.2367,
+      "predicted_change": 0.1273,
+      "percent_change": 53.79,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.4_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.45,
+      "predicted_avg": 0.294,
+      "predicted_change": 0.156,
+      "percent_change": 53.06,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.21_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.391,
+      "predicted_avg": 0.2578,
+      "predicted_change": 0.1332,
+      "percent_change": 51.64,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TZA.15_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.317,
+      "predicted_avg": 0.2095,
+      "predicted_change": 0.1075,
+      "percent_change": 51.34,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "ZMB.6_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 1.0,
+      "predicted_avg": 0.6767,
+      "predicted_change": 0.3233,
+      "percent_change": 47.78,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TUV.3_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.757,
+      "predicted_avg": 0.5125,
+      "predicted_change": 0.2445,
+      "percent_change": 47.7,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "COD.16_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.405,
+      "predicted_avg": 0.2749,
+      "predicted_change": 0.1301,
+      "percent_change": 47.31,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "AFG.6_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.369,
+      "predicted_avg": 0.2542,
+      "predicted_change": 0.1148,
+      "percent_change": 45.19,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TZA.20_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.333,
+      "predicted_avg": 0.2322,
+      "predicted_change": 0.1008,
+      "percent_change": 43.44,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "MRT.11_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.485,
+      "predicted_avg": 0.3386,
+      "predicted_change": 0.1464,
+      "percent_change": 43.23,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "GIN.4_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.843,
+      "predicted_avg": 0.5893,
+      "predicted_change": 0.2537,
+      "percent_change": 43.05,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "TCD.1_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.497,
+      "predicted_avg": 0.3507,
+      "predicted_change": 0.1463,
+      "percent_change": 41.73,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.19_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.501,
+      "predicted_avg": 0.3556,
+      "predicted_change": 0.1454,
+      "percent_change": 40.88,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.9_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.487,
+      "predicted_avg": 0.3458,
+      "predicted_change": 0.1412,
+      "percent_change": 40.82,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.24_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.463,
+      "predicted_avg": 0.3296,
+      "predicted_change": 0.1334,
+      "percent_change": 40.47,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.3_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.475,
+      "predicted_avg": 0.3383,
+      "predicted_change": 0.1367,
+      "percent_change": 40.39,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TLS.6_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.671,
+      "predicted_avg": 0.48,
+      "predicted_change": 0.191,
+      "percent_change": 39.79,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "TLS.9_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.564,
+      "predicted_avg": 0.4042,
+      "predicted_change": 0.1598,
+      "percent_change": 39.52,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "TLS.13_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.624,
+      "predicted_avg": 0.4545,
+      "predicted_change": 0.1695,
+      "percent_change": 37.31,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "COD.5_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.481,
+      "predicted_avg": 0.3505,
+      "predicted_change": 0.1305,
+      "percent_change": 37.22,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.23_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.467,
+      "predicted_avg": 0.3405,
+      "predicted_change": 0.1265,
+      "percent_change": 37.15,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.12_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.479,
+      "predicted_avg": 0.3493,
+      "predicted_change": 0.1297,
+      "percent_change": 37.13,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.10_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.42,
+      "predicted_avg": 0.3087,
+      "predicted_change": 0.1113,
+      "percent_change": 36.06,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "KEN.4_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.631,
+      "predicted_avg": 0.4645,
+      "predicted_change": 0.1665,
+      "percent_change": 35.83,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.21_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.524,
+      "predicted_avg": 0.3872,
+      "predicted_change": 0.1368,
+      "percent_change": 35.34,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "CIV.10_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.859,
+      "predicted_avg": 0.6348,
+      "predicted_change": 0.2242,
+      "percent_change": 35.32,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "KEN.7_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 1.0,
+      "predicted_avg": 0.7392,
+      "predicted_change": 0.2608,
+      "percent_change": 35.29,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "TCD.15_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.508,
+      "predicted_avg": 0.3758,
+      "predicted_change": 0.1322,
+      "percent_change": 35.16,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.20_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.478,
+      "predicted_avg": 0.354,
+      "predicted_change": 0.124,
+      "percent_change": 35.03,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.5_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.508,
+      "predicted_avg": 0.3766,
+      "predicted_change": 0.1314,
+      "percent_change": 34.89,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "CIV.4_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.889,
+      "predicted_avg": 0.6594,
+      "predicted_change": 0.2296,
+      "percent_change": 34.82,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "TCD.10_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.529,
+      "predicted_avg": 0.3926,
+      "predicted_change": 0.1364,
+      "percent_change": 34.75,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.4_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.439,
+      "predicted_avg": 0.3258,
+      "predicted_change": 0.1132,
+      "percent_change": 34.73,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "KEN.34_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.645,
+      "predicted_avg": 0.479,
+      "predicted_change": 0.166,
+      "percent_change": 34.66,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "TCD.13_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.517,
+      "predicted_avg": 0.3846,
+      "predicted_change": 0.1324,
+      "percent_change": 34.42,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.26_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.398,
+      "predicted_avg": 0.297,
+      "predicted_change": 0.101,
+      "percent_change": 34.01,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "LBR.7_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.512,
+      "predicted_avg": 0.3821,
+      "predicted_change": 0.1299,
+      "percent_change": 34.0,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TLS.1_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.705,
+      "predicted_avg": 0.5292,
+      "predicted_change": 0.1758,
+      "percent_change": 33.23,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "COD.25_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.473,
+      "predicted_avg": 0.3554,
+      "predicted_change": 0.1176,
+      "percent_change": 33.1,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TLS.8_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.665,
+      "predicted_avg": 0.5003,
+      "predicted_change": 0.1647,
+      "percent_change": 32.92,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "COD.6_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.47,
+      "predicted_avg": 0.3539,
+      "predicted_change": 0.1161,
+      "percent_change": 32.8,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TZA.15_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.461,
+      "predicted_avg": 0.3472,
+      "predicted_change": 0.1138,
+      "percent_change": 32.76,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "GHA6_2",
+      "outcome": "internet_women",
+      "predicted_current": 0.54,
+      "predicted_avg": 0.4073,
+      "predicted_change": 0.1327,
+      "percent_change": 32.58,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "BTN.4_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.535,
+      "predicted_avg": 0.4072,
+      "predicted_change": 0.1278,
+      "percent_change": 31.38,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TUV.3_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.839,
+      "predicted_avg": 0.6398,
+      "predicted_change": 0.1992,
+      "percent_change": 31.13,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "COD.15_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.47,
+      "predicted_avg": 0.3586,
+      "predicted_change": 0.1114,
+      "percent_change": 31.06,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COM.2_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.678,
+      "predicted_avg": 0.518,
+      "predicted_change": 0.16,
+      "percent_change": 30.89,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "MRT.11_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 1.0,
+      "predicted_avg": 0.7654,
+      "predicted_change": 0.2346,
+      "percent_change": 30.65,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "AFG.30_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.437,
+      "predicted_avg": 0.3355,
+      "predicted_change": 0.1015,
+      "percent_change": 30.27,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "COD.15_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.475,
+      "predicted_avg": 0.3648,
+      "predicted_change": 0.1102,
+      "percent_change": 30.19,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.14_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.511,
+      "predicted_avg": 0.3932,
+      "predicted_change": 0.1178,
+      "percent_change": 29.95,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "HTI.1_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 1.0,
+      "predicted_avg": 0.7695,
+      "predicted_change": 0.2305,
+      "percent_change": 29.95,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "COD.11_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.511,
+      "predicted_avg": 0.3933,
+      "predicted_change": 0.1177,
+      "percent_change": 29.92,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.2_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.498,
+      "predicted_avg": 0.3835,
+      "predicted_change": 0.1145,
+      "percent_change": 29.87,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.7_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.511,
+      "predicted_avg": 0.3937,
+      "predicted_change": 0.1173,
+      "percent_change": 29.8,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.13_1",
+      "outcome": "mobile_men",
+      "predicted_current": 0.551,
+      "predicted_avg": 0.4247,
+      "predicted_change": 0.1263,
+      "percent_change": 29.74,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TCD.18_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.499,
+      "predicted_avg": 0.3861,
+      "predicted_change": 0.1129,
+      "percent_change": 29.25,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "HTI.4_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.466,
+      "predicted_avg": 0.3625,
+      "predicted_change": 0.1035,
+      "percent_change": 28.54,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TCD.11_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.487,
+      "predicted_avg": 0.379,
+      "predicted_change": 0.108,
+      "percent_change": 28.5,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "TLS.4_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.59,
+      "predicted_avg": 0.4592,
+      "predicted_change": 0.1308,
+      "percent_change": 28.48,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "TLS.10_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.722,
+      "predicted_avg": 0.5623,
+      "predicted_change": 0.1597,
+      "percent_change": 28.4,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "KEN.7_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.486,
+      "predicted_avg": 0.3785,
+      "predicted_change": 0.1075,
+      "percent_change": 28.39,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "LKA.4_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.68,
+      "predicted_avg": 0.5305,
+      "predicted_change": 0.1495,
+      "percent_change": 28.17,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "GMB.6_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.541,
+      "predicted_avg": 0.4222,
+      "predicted_change": 0.1188,
+      "percent_change": 28.13,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "TLS.9_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.642,
+      "predicted_avg": 0.5018,
+      "predicted_change": 0.1402,
+      "percent_change": 27.95,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "TCD.17_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.507,
+      "predicted_avg": 0.3966,
+      "predicted_change": 0.1104,
+      "percent_change": 27.83,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "SLB.7_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.558,
+      "predicted_avg": 0.4365,
+      "predicted_change": 0.1215,
+      "percent_change": 27.82,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TLS.6_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.715,
+      "predicted_avg": 0.5594,
+      "predicted_change": 0.1556,
+      "percent_change": 27.82,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "TCD.8_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.461,
+      "predicted_avg": 0.361,
+      "predicted_change": 0.1,
+      "percent_change": 27.7,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "GHA1_2",
+      "outcome": "internet_women",
+      "predicted_current": 0.569,
+      "predicted_avg": 0.4469,
+      "predicted_change": 0.1221,
+      "percent_change": 27.31,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.22_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.531,
+      "predicted_avg": 0.418,
+      "predicted_change": 0.113,
+      "percent_change": 27.03,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "KEN.10_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.699,
+      "predicted_avg": 0.5514,
+      "predicted_change": 0.1476,
+      "percent_change": 26.77,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "COD.3_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.498,
+      "predicted_avg": 0.3939,
+      "predicted_change": 0.1041,
+      "percent_change": 26.42,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "GHA11_2",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.923,
+      "predicted_avg": 0.732,
+      "predicted_change": 0.191,
+      "percent_change": 26.09,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "SOM.2_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.54,
+      "predicted_avg": 0.4299,
+      "predicted_change": 0.1101,
+      "percent_change": 25.6,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "EGY.26_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.928,
+      "predicted_avg": 0.7391,
+      "predicted_change": 0.1889,
+      "percent_change": 25.56,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "COD.19_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.504,
+      "predicted_avg": 0.4015,
+      "predicted_change": 0.1025,
+      "percent_change": 25.52,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "GHA8_2",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.932,
+      "predicted_avg": 0.7427,
+      "predicted_change": 0.1893,
+      "percent_change": 25.49,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "TLS.2_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.647,
+      "predicted_avg": 0.5158,
+      "predicted_change": 0.1312,
+      "percent_change": 25.44,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "MRT.11_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.654,
+      "predicted_avg": 0.5221,
+      "predicted_change": 0.1319,
+      "percent_change": 25.27,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "ZMB.6_1",
+      "outcome": "mobile_fm_ratio",
+      "predicted_current": 1.0,
+      "predicted_avg": 0.7988,
+      "predicted_change": 0.2012,
+      "percent_change": 25.18,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "BEN.5_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.673,
+      "predicted_avg": 0.5381,
+      "predicted_change": 0.1349,
+      "percent_change": 25.08,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "HTI.8_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.554,
+      "predicted_avg": 0.4435,
+      "predicted_change": 0.1105,
+      "percent_change": 24.93,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TLS.13_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.673,
+      "predicted_avg": 0.5395,
+      "predicted_change": 0.1335,
+      "percent_change": 24.74,
+      "significant_count_12m": 5
+    },
+    {
+      "gid_1": "COD.9_1",
+      "outcome": "mobile_men",
+      "predicted_current": 0.516,
+      "predicted_avg": 0.4145,
+      "predicted_change": 0.1015,
+      "percent_change": 24.48,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TCD.16_1",
+      "outcome": "mobile_women",
+      "predicted_current": 0.52,
+      "predicted_avg": 0.4195,
+      "predicted_change": 0.1005,
+      "percent_change": 23.97,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TZA.30_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.575,
+      "predicted_avg": 0.4638,
+      "predicted_change": 0.1112,
+      "percent_change": 23.96,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "KEN.11_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.635,
+      "predicted_avg": 0.5137,
+      "predicted_change": 0.1213,
+      "percent_change": 23.61,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "KEN.19_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.574,
+      "predicted_avg": 0.4658,
+      "predicted_change": 0.1082,
+      "percent_change": 23.24,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "GHA9_2",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.932,
+      "predicted_avg": 0.7577,
+      "predicted_change": 0.1743,
+      "percent_change": 23.01,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "TCD.1_1",
+      "outcome": "mobile_men",
+      "predicted_current": 0.878,
+      "predicted_avg": 0.7177,
+      "predicted_change": 0.1603,
+      "percent_change": 22.33,
+      "significant_count_12m": 2
+    },
+    {
+      "gid_1": "GHA6_2",
+      "outcome": "internet_men",
+      "predicted_current": 0.657,
+      "predicted_avg": 0.5415,
+      "predicted_change": 0.1155,
+      "percent_change": 21.32,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TLS.12_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.749,
+      "predicted_avg": 0.6182,
+      "predicted_change": 0.1308,
+      "percent_change": 21.15,
+      "significant_count_12m": 6
+    },
+    {
+      "gid_1": "MMR.8_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.592,
+      "predicted_avg": 0.4905,
+      "predicted_change": 0.1015,
+      "percent_change": 20.68,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TCD.2_1",
+      "outcome": "mobile_men",
+      "predicted_current": 0.844,
+      "predicted_avg": 0.6995,
+      "predicted_change": 0.1445,
+      "percent_change": 20.66,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "COD.5_1",
+      "outcome": "mobile_men",
+      "predicted_current": 0.662,
+      "predicted_avg": 0.5489,
+      "predicted_change": 0.1131,
+      "percent_change": 20.6,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "SLB.7_1",
+      "outcome": "internet_fm_ratio",
+      "predicted_current": 0.969,
+      "predicted_avg": 0.8059,
+      "predicted_change": 0.1631,
+      "percent_change": 20.23,
+      "significant_count_12m": 1
+    },
+    {
+      "gid_1": "TLS.5_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.676,
+      "predicted_avg": 0.5625,
+      "predicted_change": 0.1135,
+      "percent_change": 20.17,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "KEN.34_1",
+      "outcome": "internet_men",
+      "predicted_current": 0.734,
+      "predicted_avg": 0.6111,
+      "predicted_change": 0.1229,
+      "percent_change": 20.12,
+      "significant_count_12m": 4
+    },
+    {
+      "gid_1": "KEN.25_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.622,
+      "predicted_avg": 0.5179,
+      "predicted_change": 0.1041,
+      "percent_change": 20.1,
+      "significant_count_12m": 3
+    },
+    {
+      "gid_1": "KEN.35_1",
+      "outcome": "internet_women",
+      "predicted_current": 0.657,
+      "predicted_avg": 0.5472,
+      "predicted_change": 0.1098,
+      "percent_change": 20.06,
+      "significant_count_12m": 3
+    }
+  ],
+  "row_count": 119
 }
