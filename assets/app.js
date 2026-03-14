@@ -38,6 +38,19 @@ function renderCards() {
       (card) => `<article class="card"><div class="label">${card.label}</div><div class="value">${card.value}</div></article>`,
     )
     .join("");
+
+  // Missed units expandable section
+  const missed = summary.missed_unit_names || [];
+  const countEl = document.getElementById("missed-count");
+  const listEl = document.getElementById("missed-units-list");
+  const section = document.getElementById("missed-units-section");
+  if (countEl) countEl.textContent = `(${missed.length})`;
+  if (listEl) {
+    listEl.innerHTML = missed.length
+      ? missed.map((u) => `<span class="missed-tag">${esc(u)}</span>`).join("")
+      : '<span class="muted">None — all expected units are present.</span>';
+  }
+  if (section) section.style.display = missed.length === 0 ? "none" : "";
 }
 
 function populateOutcomeFilter() {
@@ -84,6 +97,9 @@ function renderTable() {
       const gidCell = hasDetail
         ? `<a class="gadm-link" href="${detailUrl(row.gid_1, row.outcome)}">${esc(row.gid_1)}</a>`
         : esc(row.gid_1);
+      const detailBtn = hasDetail
+        ? `<a class="detail-btn" href="${detailUrl(row.gid_1, row.outcome)}">Open →</a>`
+        : ``;
       return `
         <tr>
           <td>${gidCell}</td>
@@ -93,6 +109,7 @@ function renderTable() {
           <td>${fmt(row.predicted_change)}</td>
           <td class="${pct >= 0 ? "pos" : ""}">${pct.toFixed(2)}%</td>
           <td>${row.significant_count_12m}</td>
+          <td>${detailBtn}</td>
         </tr>
       `;
     })

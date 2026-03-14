@@ -15,6 +15,12 @@
 
     <section class="cards" id="summary-cards"></section>
 
+    <details id="missed-units-section" class="missed-units">
+      <summary>Missed units <span id="missed-count"></span></summary>
+      <p class="muted">These units were expected but had no prediction in the selected month.</p>
+      <div id="missed-units-list" class="missed-tags"></div>
+    </details>
+
     <section class="controls">
       <label>
         Outcome
@@ -41,6 +47,7 @@
             <th>Change</th>
             <th>% Change</th>
             <th>Significant (12m)</th>
+            <th></th>
           </tr>
         </thead>
         <tbody id="rows-table"></tbody>
