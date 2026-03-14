@@ -1,9 +1,6 @@
 let payload = null;
 let rows = [];
 let detailSeries = {};
-let predChart = null;
-let avgChart = null;
-let rawChart = null;
 
 function esc(value) {
   return String(value ?? "")
@@ -45,7 +42,7 @@ function renderCards() {
 
 function populateOutcomeFilter() {
   const select = document.getElementById("outcome-filter");
-  const outcomes = Array.from(new Set(rows.map((x) => x.outcome))).sort();
+  const outcomes = Array.from(new Set(rows.map((item) => item.outcome))).sort();
   const options = ["all", ...outcomes]
     .map((outcome) => `<option value="${outcome}">${outcome}</option>`)
     .join("");
@@ -65,6 +62,11 @@ function filteredRows() {
   });
 }
 
+function detailUrl(gid, outcome) {
+  const query = new URLSearchParams({ gadm: gid, outcome });
+  return `detail.html?${query.toString()}`;
+}
+
 function renderTable() {
   const table = document.getElementById("rows-table");
   const filtered = filteredRows();
@@ -80,7 +82,7 @@ function renderTable() {
       const detailKey = `${row.gid_1}||${row.outcome}`;
       const hasDetail = Boolean(detailSeries[detailKey]);
       const gidCell = hasDetail
-        ? `<a href="#detail-panel" class="gadm-link" data-detail-key="${esc(detailKey)}">${esc(row.gid_1)}</a>`
+        ? `<a class="gadm-link" href="${detailUrl(row.gid_1, row.outcome)}">${esc(row.gid_1)}</a>`
         : esc(row.gid_1);
       return `
         <tr>
@@ -103,158 +105,13 @@ function bindControls() {
     element.addEventListener("input", renderTable);
     element.addEventListener("change", renderTable);
   });
-
-  const detailKey = document.getElementById("detail-key");
-  detailKey.addEventListener("input", renderDetail);
-  detailKey.addEventListener("change", renderDetail);
-
-  const table = document.getElementById("rows-table");
-  table.addEventListener("click", (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLElement)) return;
-    const link = target.closest("[data-detail-key]");
-    if (!link) return;
-    event.preventDefault();
-
-    const key = link.getAttribute("data-detail-key") || "";
-    const select = document.getElementById("detail-key");
-    if (!key || !detailSeries[key]) return;
-
-    select.value = key;
-    renderDetail();
-    document.getElementById("detail-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
 }
 
 function renderFooter() {
   const footer = document.getElementById("footer-meta");
   const generated = payload?.generated_at_utc || "unknown";
   const detailType = payload?.detail_data_type || "unknown";
-  footer.textContent = `Generated UTC: ${generated} | Detail FB data type: ${detailType}`;
-}
-
-function toPointList(labels, values) {
-  if (!Array.isArray(labels) || !Array.isArray(values)) return [];
-  return labels.map((label, idx) => ({ x: label, y: toNumber(values[idx], 0) }));
-}
-
-function chartOptions(yMin = 0, yMax = null) {
-  return {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        beginAtZero: true,
-        min: yMin,
-        ...(yMax === null ? {} : { max: yMax }),
-      },
-    },
-    plugins: {
-      legend: {
-        display: true,
-      },
-    },
-  };
-}
-
-function upsertLineChart(existingChart, canvasId, labels, datasets, options) {
-  const canvas = document.getElementById(canvasId);
-  if (!canvas) return existingChart;
-
-  const cfg = {
-    type: "line",
-    data: {
-      labels,
-      datasets,
-    },
-    options,
-  };
-
-  if (existingChart) {
-    existingChart.data = cfg.data;
-    existingChart.options = cfg.options;
-    existingChart.update();
-    return existingChart;
-  }
-
-  return new Chart(canvas.getContext("2d"), cfg);
-}
-
-function populateDetailSelector() {
-  const select = document.getElementById("detail-key");
-  const keys = Object.keys(detailSeries).sort();
-  if (!keys.length) {
-    select.innerHTML = '<option value="">No detail series available</option>';
-    return;
-  }
-
-  const options = ['<option value="">Select from table or dropdown...</option>'];
-  keys.forEach((key) => {
-    const item = detailSeries[key];
-    options.push(`<option value="${esc(key)}">${esc(item.gid_1)} | ${esc(item.outcome)}</option>`);
-  });
-  select.innerHTML = options.join("");
-}
-
-function renderDetail() {
-  const select = document.getElementById("detail-key");
-  const key = select.value;
-  const item = detailSeries[key];
-
-  const detailContent = document.getElementById("detail-content");
-
-  if (!item) {
-    detailContent?.classList.add("hidden");
-    predChart = upsertLineChart(predChart, "pred-chart", [], [], chartOptions(0, 1));
-    avgChart = upsertLineChart(avgChart, "avg-chart", [], [], chartOptions(0, null));
-    rawChart = upsertLineChart(rawChart, "raw-chart", [], [], chartOptions(0, null));
-    return;
-  }
-
-  detailContent?.classList.remove("hidden");
-
-  const pred = item.prediction || {};
-  predChart = upsertLineChart(
-    predChart,
-    "pred-chart",
-    pred.labels || [],
-    [
-      {
-        label: "Predicted",
-        data: pred.values || [],
-        borderColor: "#2f6feb",
-        pointBackgroundColor: pred.point_colors || [],
-        tension: 0.15,
-      },
-    ],
-    chartOptions(0, 1),
-  );
-
-  const avg = item.averaged_fb || {};
-  avgChart = upsertLineChart(
-    avgChart,
-    "avg-chart",
-    avg.labels || [],
-    [
-      { label: "All", data: avg.all || [], borderColor: "#1f77b4", tension: 0.15 },
-      { label: "Men", data: avg.men || [], borderColor: "#2ca02c", tension: 0.15 },
-      { label: "Women", data: avg.women || [], borderColor: "#d62728", tension: 0.15 },
-    ],
-    chartOptions(0, null),
-  );
-
-  const raw = item.raw_fb || {};
-  rawChart = upsertLineChart(
-    rawChart,
-    "raw-chart",
-    raw.labels || [],
-    [
-      { label: "All", data: raw.all || [], borderColor: "#1f77b4", tension: 0.15 },
-      { label: "Men", data: raw.men || [], borderColor: "#2ca02c", tension: 0.15 },
-      { label: "Women", data: raw.women || [], borderColor: "#d62728", tension: 0.15 },
-    ],
-    chartOptions(0, null),
-  );
+  footer.textContent = `Generated UTC: ${generated} | Detail FB data type: ${detailType} | Click a GID to open detail page`;
 }
 
 async function init() {
@@ -269,10 +126,8 @@ async function init() {
 
   renderCards();
   populateOutcomeFilter();
-  populateDetailSelector();
   bindControls();
   renderTable();
-  renderDetail();
   renderFooter();
 }
 

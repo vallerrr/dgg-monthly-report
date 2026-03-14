@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DGG Detail View</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 id="detail-title">GADM Detail</h1>
+      <p class="muted">Prediction trend, averaged FB trend, and current-month raw FB trend.</p>
+    </header>
+
+    <section class="page-actions">
+      <a class="btn-link" href="index.html">← Back to main change table</a>
+    </section>
+
+    <section class="controls">
+      <label>
+        GID + Outcome
+        <select id="detail-key"></select>
+      </label>
+    </section>
+
+    <section class="chart-grid">
+      <article class="card">
+        <h3>Predicted Trend (12m + current)</h3>
+        <canvas id="pred-chart" height="120"></canvas>
+      </article>
+      <article class="card">
+        <h3>Averaged FB Trend (last 12 months)</h3>
+        <canvas id="avg-chart" height="120"></canvas>
+      </article>
+      <article class="card">
+        <h3>Current Month Raw FB (daily)</h3>
+        <canvas id="raw-chart" height="120"></canvas>
+      </article>
+    </section>
+
+    <footer class="footer" id="footer-meta"></footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/detail.js"></script>
+</body>
+</html>
