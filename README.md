@@ -85,6 +85,12 @@ git commit -m "Update monthly data"
 git push
 ```
 
+If you sync the whole folder, exclude macOS metadata files:
+
+```bash
+rsync -av --exclude '.git' --exclude '.DS_Store' report_web_pages_project/ ../dgg-monthly-report/
+```
+
 GitHub Actions will redeploy automatically.
 
 ## Optional: choose a specific month
