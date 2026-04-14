@@ -63,6 +63,10 @@ function keyFromQuery() {
   return `${gadm}||${outcome}`;
 }
 
+function monthFromQuery() {
+  return new URLSearchParams(window.location.search).get("month") || "";
+}
+
 function setQueryForKey(key) {
   const item = detailSeries[key];
   if (!item) return;
@@ -168,13 +172,31 @@ function renderFooter() {
 }
 
 async function init() {
-  const response = await fetch("data/latest.json", { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load data/latest.json (${response.status})`);
-  }
+  const monthLabel = monthFromQuery();
+
+  const idxResp = await fetch("data/index.json", { cache: "no-store" });
+  if (!idxResp.ok) throw new Error(`Failed to load data/index.json (${idxResp.status})`);
+  const index = await idxResp.json();
+  const months = index.months || [];
+
+  if (!months.length) throw new Error("No months found in index.json");
+
+  const monthEntry = monthLabel
+    ? (months.find((m) => m.label === monthLabel) || months[0])
+    : months[0];
+
+  const response = await fetch(`data/${monthEntry.file}`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`Failed to load data/${monthEntry.file} (${response.status})`);
 
   payload = await response.json();
   detailSeries = payload?.detail_series || {};
+
+  // Ensure month label is in the URL for bookmarking
+  if (!monthLabel) {
+    const params = new URLSearchParams(window.location.search);
+    params.set("month", monthEntry.label);
+    window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
+  }
 
   const selectedKey = populateDetailSelector(keyFromQuery());
   bindControls();

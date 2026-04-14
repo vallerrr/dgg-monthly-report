@@ -1,6 +1,7 @@
 let payload = null;
 let rows = [];
 let detailSeries = {};
+let currentMonthLabel = null;
 
 function esc(value) {
   return String(value ?? "")
@@ -77,6 +78,7 @@ function filteredRows() {
 
 function detailUrl(gid, outcome) {
   const query = new URLSearchParams({ gadm: gid, outcome });
+  if (currentMonthLabel) query.set("month", currentMonthLabel);
   return `detail.html?${query.toString()}`;
 }
 
@@ -131,21 +133,40 @@ function renderFooter() {
   footer.textContent = `Generated UTC: ${generated} | Detail FB data type: ${detailType} | Click a GID to open detail page`;
 }
 
-async function init() {
-  const response = await fetch("data/latest.json", { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load data/latest.json (${response.status})`);
-  }
-
+async function loadMonth(file, label) {
+  const response = await fetch(`data/${file}`, { cache: "no-store" });
+  if (!response.ok) throw new Error(`Failed to load data/${file} (${response.status})`);
   payload = await response.json();
+  currentMonthLabel = label;
   rows = payload?.rows || [];
   detailSeries = payload?.detail_series || {};
-
   renderCards();
   populateOutcomeFilter();
-  bindControls();
   renderTable();
   renderFooter();
+}
+
+async function init() {
+  const idxResp = await fetch("data/index.json", { cache: "no-store" });
+  if (!idxResp.ok) throw new Error(`Failed to load data/index.json (${idxResp.status})`);
+  const index = await idxResp.json();
+  const months = index.months || [];
+
+  if (!months.length) throw new Error("No months found in index.json");
+
+  const select = document.getElementById("month-selector");
+  select.innerHTML = months
+    .map((m) => `<option value="${m.file}" data-label="${esc(m.label)}">${esc(m.label)}</option>`)
+    .join("");
+  select.value = months[0].file;
+
+  select.addEventListener("change", () => {
+    const opt = select.options[select.selectedIndex];
+    loadMonth(select.value, opt.dataset.label);
+  });
+
+  bindControls();
+  await loadMonth(months[0].file, months[0].label);
 }
 
 init().catch((error) => {
