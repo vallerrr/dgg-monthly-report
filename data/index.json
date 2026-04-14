@@ -4,13 +4,73 @@
       "year": 2026,
       "month": 3,
       "label": "2026-03",
-      "file": "latest.json"
+      "file": "2026-03.json"
     },
     {
       "year": 2026,
       "month": 2,
       "label": "2026-02",
       "file": "2026-02.json"
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "label": "2026-01",
+      "file": "2026-01.json"
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "label": "2025-12",
+      "file": "2025-12.json"
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "label": "2025-11",
+      "file": "2025-11.json"
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "label": "2025-10",
+      "file": "2025-10.json"
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "label": "2025-09",
+      "file": "2025-09.json"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "label": "2025-08",
+      "file": "2025-08.json"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "label": "2025-07",
+      "file": "2025-07.json"
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "label": "2025-06",
+      "file": "2025-06.json"
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "label": "2025-05",
+      "file": "2025-05.json"
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "label": "2025-04",
+      "file": "2025-04.json"
     }
   ]
 }
