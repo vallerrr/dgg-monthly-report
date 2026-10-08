@@ -2,6 +2,18 @@
   "months": [
     {
       "year": 2026,
+      "month": 9,
+      "label": "2026-09",
+      "file": "2026-09.json"
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "label": "2026-08",
+      "file": "2026-08.json"
+    },
+    {
+      "year": 2026,
       "month": 7,
       "label": "2026-07",
       "file": "2026-07.json"
