@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DGG Kanban</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/kanban.css" />
+</head>
+<body class="kanban-page">
+  <main class="container">
+    <header class="header">
+      <div class="page-actions"><a class="btn-link" href="index.html">← Monthly report</a></div>
+      <h1>DGG Kanban</h1>
+      <p class="muted" id="kb-meta">Collection monitor and monthly report status</p>
+    </header>
+
+    <div id="kb-banners"></div>
+
+    <section class="kb-section">
+      <h2>Badger VM</h2>
+      <div class="kb-vm">
+        <div class="card kb-disk">
+          <div class="label">Disk used</div>
+          <div class="value" id="kb-disk-value">–</div>
+          <div class="kb-gauge" id="kb-gauge" role="img"></div>
+          <div class="kb-legend" id="kb-legend"></div>
+        </div>
+        <div class="card kb-trend">
+          <div class="label">Disk used over time</div>
+          <svg id="kb-trend" class="kb-trend-svg" role="img" aria-label="Disk usage over time"></svg>
+          <div class="muted kb-small" id="kb-trend-note"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kb-section">
+      <h2>Collections</h2>
+      <p class="muted kb-small">Bars: the last runs on badger (height = hours). Coverage = rows collected vs the spec.</p>
+      <div class="kb-board" id="kb-board"></div>
+    </section>
+
+    <section class="kb-section">
+      <h2>Monthly report</h2>
+      <div class="kb-board kb-board-months" id="kb-months"></div>
+    </section>
+
+    <footer class="footer" id="kb-footer"></footer>
+  </main>
+  <div class="kb-tooltip" id="kb-tooltip" hidden></div>
+  <script src="assets/kanban.js"></script>
+</body>
+</html>
