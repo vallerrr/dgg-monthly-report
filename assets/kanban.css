@@ -130,6 +130,42 @@
 .kb-runs .hit { position: absolute; inset: -6px -1px 0; }
 .kb-runs-note { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; margin-top: 2px; }
 
+/* sparse values: card block + table */
+.kb-sparse { margin-top: 6px; padding-top: 5px; border-top: 1px solid var(--kb-line); }
+.kb-sparse-head { color: var(--muted); font-size: 11px; margin-bottom: 2px; }
+.kb-sparse-grid { width: 100%; border-collapse: collapse; font-size: 11px; font-variant-numeric: tabular-nums; }
+.kb-sparse-grid th, .kb-sparse-grid td {
+  padding: 1px 0 1px 6px; text-align: right; vertical-align: top; background: none; border: 0; white-space: nowrap;
+}
+.kb-sparse-grid th:first-child { padding-left: 0; text-align: left; color: var(--muted); font-weight: 400; white-space: nowrap; }
+.kb-sparse-grid tr:first-child th { color: var(--muted); font-weight: 400; text-transform: capitalize; }
+.kb-sparse-grid td { color: var(--fg); font-weight: 600; }
+.kb-sparse-grid td .count { display: block; color: var(--muted); font-weight: 400; font-size: 10.5px; }
+.kb-sparse-grid tr.api td { color: var(--muted); font-weight: 400; }
+
+.kb-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--card); }
+.kb-table { border-collapse: collapse; width: 100%; font-size: 12px; font-variant-numeric: tabular-nums; }
+.kb-table th, .kb-table td {
+  padding: 5px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; background: var(--card); color: var(--fg);
+}
+.kb-table thead th { color: var(--muted); }
+.kb-table tbody tr:hover > * { background: color-mix(in srgb, var(--line) 45%, var(--card)); }
+.kb-table tbody tr:last-child > * { border-bottom: none; }
+.kb-table .num { text-align: right; }
+.kb-table .name { text-align: left; position: sticky; left: 0; background: var(--card); }
+.kb-table tbody th { font-weight: 600; }
+.kb-table th.group { text-align: center; text-transform: capitalize; border-left: 1px solid var(--line); }
+.kb-table thead tr:last-child th:nth-child(6n + 1) { border-left: 1px solid var(--line); }
+.kb-table tbody td:nth-child(6n + 2) { border-left: 1px solid var(--line); }
+.kb-table td.muted { color: var(--muted); }
+.kb-table td .count { display: block; color: var(--muted); font-size: 11px; }
+.kb-sort {
+  font: inherit; font-weight: 600; color: var(--fg); background: none; border: 0; padding: 0; cursor: pointer;
+}
+.kb-sort:focus-visible { outline: 2px solid var(--kb-series-1); outline-offset: 2px; border-radius: 2px; }
+.kb-table th[aria-sort="ascending"] .kb-sort::after { content: " ▲"; font-size: 9px; }
+.kb-table th[aria-sort="descending"] .kb-sort::after { content: " ▼"; font-size: 9px; }
+
 .kb-tooltip {
   position: fixed; z-index: 10; pointer-events: none; max-width: 280px;
   background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: 6px;

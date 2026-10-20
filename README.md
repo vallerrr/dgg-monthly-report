@@ -41,6 +41,37 @@ bash update_monthly_report_pages.sh --data-type both --max-detail-pairs 500 --pu
 
 GitHub Actions redeploys automatically on every push to `main`.
 
+## Collection kanban (`kanban.html`)
+
+`kanban/monitor.json` and `kanban/history.json` are written by `dgg_pipeline/main_monitor.py`
+(`python main_monitor.py --refresh --push`). Each collection goes to the worst column that applies:
+
+| Column | When |
+| --- | --- |
+| Down / stalled | flag `not-launched` (no launch for 48 h) or `stalled` (no log line for 6 h) |
+| Specs blocked | flag `stuck-spec` (left-over `collecting/` file) |
+| Collected, not in DB | under half of the last 7 days of VM rows are in the database |
+| Partial / slow | flag `partial-coverage` (< 95%), `slow` (> 1.5 × median run) or `errors` (> 20) |
+| Healthy | none of the above |
+
+Flags that never change the column, only add an email line or banner: `backup-reminder` (disk ≥ 2/3),
+`log-intervention` (logs too large) and `placeholder-rows` (raw finished files of the last 7 days hold
+`mau_audience_upper_bound == -1` rows).
+
+**Sparse values (last 7 days).** Each card and the table under the board count the rows of finished files
+whose `mau_audience_upper_bound` is not a real estimate, for raw files and `_betterestimate` files apart:
+
+| Key | Definition | Meaning |
+| --- | --- | --- |
+| `imputed_1000` | upper 1000, lower -1 | optimiser deduced the query as sparse and never asked Facebook |
+| `api_1000` | upper 1000, lower 1000 | Facebook's own floor (context, not a problem) |
+| `zero` | upper 0 | better-estimates subtraction gave 0 |
+| `placeholder` | upper -1 | placeholder row never collected (run cut short, file still written) |
+| `nan` | upper empty / not a number | better estimates found no valid country, or unparsable response |
+
+Percentages are of the rows of that kind. A status written before these counts shows "n/a".
+`history.json` keeps the per-collection percentages under `sparse_pct` (last 182 entries).
+
 ## Data layout
 
 ```

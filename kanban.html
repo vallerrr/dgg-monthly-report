@@ -41,6 +41,15 @@
     </section>
 
     <section class="kb-section">
+      <h2>Sparse values (last 7 days)</h2>
+      <p class="muted kb-small">Finished-file rows whose mau_audience_upper_bound is not a real estimate, as % of the rows of that
+        kind (raw, or after better estimates; count underneath). Imputed 1000: the optimiser deduced the query as sparse and
+        never asked Facebook. API 1000: Facebook's own floor, for context. 0: better-estimates subtraction gave 0.
+        −1: placeholder row never collected. NaN: empty. Click a column to sort.</p>
+      <div class="kb-table-wrap" id="kb-sparse-table"></div>
+    </section>
+
+    <section class="kb-section">
       <h2>Monthly report</h2>
       <div class="kb-board kb-board-months" id="kb-months"></div>
     </section>

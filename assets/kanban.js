@@ -27,7 +27,20 @@ const el = (tag, attrs = {}, ...children) => {
   for (const c of children.flat()) if (c != null) node.append(c);
   return node;
 };
+// sparse mau_audience_upper_bound categories (status sparse_7d from collector_status.py); api_1000 is context only
+const SPARSE = [
+  ["imputed_1000", "imputed 1000", "optimiser deduced the query as sparse and never asked Facebook (upper 1000, lower −1)"],
+  ["zero", "0", "better-estimates subtraction gave 0"],
+  ["placeholder", "−1", "placeholder row never collected (run cut short, file still written)"],
+  ["nan", "NaN", "empty or not a number"],
+];
+const SPARSE_API = ["api_1000", "API 1000", "Facebook's own floor value (context, not a problem)"];
+const SPARSE_KINDS = ["raw", "better"];
+
 const pct = (x) => (x == null ? "–" : `${Math.round(x * 100)}%`);
+const fmtN = (n) => n.toLocaleString("en-GB");
+const share = (n, rows) => (rows ? (100 * n) / rows : null);
+const countPct = (n, rows) => `${fmtN(n)} (${rows ? share(n, rows).toFixed(1) : "–"}%)`;
 const shortName = (n) => n.replace(/^dgg_subnational_/, "").replace(/^dgg_/, "");
 
 async function getJSON(path) {
@@ -147,6 +160,29 @@ function runBars(c) {
     el("span", {}, `median ${c.median_run_hours ?? "–"} h`), el("span", {}, `max ${Math.round(max)} h`))];
 }
 
+function sparseBlock(c) {
+  const s = c.sparse_7d;
+  if (!s) return el("div", { class: "row" }, "Sparse values (7 days)", el("b", {}, "n/a"));
+  const box = el("div", { class: "kb-sparse" }, el("div", { class: "kb-sparse-head" }, `Sparse values since ${s.since}`));
+  const kinds = SPARSE_KINDS.filter((k) => s[k] && s[k].files);
+  if (!kinds.length) {
+    box.append(el("div", { class: "kb-sparse-head" }, "no finished files"));
+    return box;
+  }
+  // a category per row, raw / better side by side; each cell = % of that kind's rows over the count
+  const cell = (t, k) => el("td", {}, `${share(t[k], t.rows).toFixed(1)}%`, el("span", { class: "count" }, fmtN(t[k])));
+  const grid = el("table", { class: "kb-sparse-grid" },
+    el("tr", {}, el("th", {}, ""), kinds.map((kind) => el("th", {}, kind))),
+    [...SPARSE, SPARSE_API].map(([k, label, desc]) => {
+      const tr = el("tr", { class: k === "api_1000" ? "api" : "" }, el("th", {}, label), kinds.map((kind) => cell(s[kind], k)));
+      attachTip(tr, `<b>${label}</b>: ${desc}<br>` +
+        kinds.map((kind) => `${kind}: ${countPct(s[kind][k], s[kind].rows)} of ${fmtN(s[kind].rows)} rows, ${s[kind].files} files`).join("<br>"));
+      return tr;
+    }));
+  box.append(grid);
+  return box;
+}
+
 function collectionCard(c) {
   const last = c.last_finished || {};
   const card = el("article", { class: "kb-card" }, el("h3", { title: c.collection }, shortName(c.collection)));
@@ -161,6 +197,7 @@ function collectionCard(c) {
       el("b", {}, `${pct(c.db.share_in_db)}${c.db.last_db_date ? ` · last ${c.db.last_db_date}` : " · none"}`)));
   }
   card.append(el("div", { class: "row" }, "Logs", el("b", {}, `${c.logs_gb} GB`)));
+  card.append(sparseBlock(c));
   card.append(...runBars(c));
 
   const tags = c.flags.map((f) => el("span", { class: "tag" }, f));
@@ -189,6 +226,62 @@ function renderBoard(m) {
         el("span", { class: "count" }, String(items.length))),
       items.map(collectionCard)));
   }
+}
+
+// ---------------------------------------------------------------- sparse-value table
+function renderSparseTable(m) {
+  const wrap = document.getElementById("kb-sparse-table");
+  const cols = [];
+  for (const kind of SPARSE_KINDS) {
+    cols.push({ kind, key: "rows", label: "rows" });
+    for (const [key, label] of [SPARSE[0], SPARSE_API, ...SPARSE.slice(1)]) cols.push({ kind, key, label });
+  }
+  // the name sorts a-z; rows by count; categories by % of that kind's rows; n/a always last
+  const sortValue = (c, col) => {
+    if (!col) return c.collection;
+    const t = c.sparse_7d && c.sparse_7d[col.kind];
+    if (!t || !t.files) return null;
+    return col.key === "rows" ? t.rows : share(t[col.key], t.rows);
+  };
+  let sortCol = 2, sortDir = -1; // raw imputed 1000, highest first
+
+  const ths = [null, ...cols].map((col, i) => {
+    const btn = el("button", { type: "button", class: "kb-sort" }, col ? col.label : "Collection");
+    btn.addEventListener("click", () => {
+      sortDir = sortCol === i ? -sortDir : (i ? -1 : 1);
+      sortCol = i;
+      draw();
+    });
+    return el("th", { scope: "col", class: col ? "num" : "name" }, btn);
+  });
+  ths[0].rowSpan = 2;
+  const body = el("tbody");
+  wrap.replaceChildren(el("table", { class: "kb-table" },
+    el("thead", {},
+      el("tr", {}, ths[0], SPARSE_KINDS.map((k) => el("th", { colSpan: 6, scope: "colgroup", class: "group" }, k))),
+      el("tr", {}, ths.slice(1))),
+    body));
+
+  function draw() {
+    const col = sortCol ? cols[sortCol - 1] : null;
+    const items = [...m.collections].sort((a, b) => {
+      const va = sortValue(a, col), vb = sortValue(b, col);
+      if (va == null || vb == null) return (va == null) - (vb == null);
+      return (va < vb ? -1 : va > vb ? 1 : 0) * sortDir;
+    });
+    ths.forEach((th, i) => th.setAttribute("aria-sort", i === sortCol ? (sortDir > 0 ? "ascending" : "descending") : "none"));
+    body.replaceChildren(...items.map((c) => el("tr", {},
+      el("th", { scope: "row", class: "name", title: c.collection }, shortName(c.collection)),
+      cols.map((cl) => {
+        const s = c.sparse_7d, t = s && s[cl.kind];
+        if (!s) return el("td", { class: "num muted" }, "n/a");
+        if (!t || !t.files) return el("td", { class: "num muted" }, "–");
+        if (cl.key === "rows") return el("td", { class: "num" }, fmtN(t.rows));
+        return el("td", { class: `num${cl.key === "api_1000" ? " muted" : ""}` },
+          `${share(t[cl.key], t.rows).toFixed(1)}%`, el("span", { class: "count" }, fmtN(t[cl.key])));
+      }))));
+  }
+  draw();
 }
 
 // ---------------------------------------------------------------- monthly report board
@@ -233,6 +326,7 @@ function renderMonths(index, m) {
   renderBanners(monitor);
   renderVM(monitor, history);
   renderBoard(monitor);
+  renderSparseTable(monitor);
   renderMonths(index, monitor);
   document.getElementById("kb-footer").textContent = `Generated ${monitor.generated_at_utc} UTC by dgg_pipeline/main_monitor.py`;
 })();
