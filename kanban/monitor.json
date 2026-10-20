@@ -1,18 +1,18 @@
 {
- "generated_at_utc": "2026-10-20 14:10:41",
- "vm_status_at_utc": "2026-10-20 13:57:06",
+ "generated_at_utc": "2026-10-20 17:14:17",
+ "vm_status_at_utc": "2026-10-20 16:56:14",
  "host": "dggcollectorsbig",
  "disk": {
   "total_gb": 309.95,
-  "used_gb": 197.36,
-  "free_gb": 112.58,
-  "used_share": 0.6367,
+  "used_gb": 197.5,
+  "free_gb": 112.44,
+  "used_share": 0.6372,
   "breakdown_gb": {
-   "finished_data": 89.5,
-   "collector_logs": 58.51,
+   "finished_data": 89.52,
+   "collector_logs": 58.65,
    "crawler": 1.5,
    "docker": null,
-   "other": 47.85
+   "other": 47.83
   },
   "flags": [
    "log-intervention"
@@ -102,6 +102,28 @@
    "errors_in_log": 0,
    "logs_gb": 0.22,
    "finished_gb": 0.49,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 24,
+     "rows": 119560,
+     "imputed_1000": 0,
+     "api_1000": 27504,
+     "zero": 0,
+     "placeholder": 0,
+     "nan": 0
+    },
+    "better": {
+     "files": 0,
+     "rows": 0,
+     "imputed_1000": 0,
+     "api_1000": 0,
+     "zero": 0,
+     "placeholder": 0,
+     "nan": 0
+    }
+   },
    "db": {
     "vm_rows_7d": 74725,
     "db_rows_7d": 0,
@@ -169,6 +191,28 @@
    "errors_in_log": 1,
    "logs_gb": 0.21,
    "finished_gb": 0.46,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 24,
+     "rows": 123480,
+     "imputed_1000": 0,
+     "api_1000": 32441,
+     "zero": 0,
+     "placeholder": 0,
+     "nan": 0
+    },
+    "better": {
+     "files": 0,
+     "rows": 0,
+     "imputed_1000": 0,
+     "api_1000": 0,
+     "zero": 0,
+     "placeholder": 0,
+     "nan": 0
+    }
+   },
    "db": {
     "vm_rows_7d": 77175,
     "db_rows_7d": 0,
@@ -178,9 +222,9 @@
   },
   {
    "collection": "dgg_subnational_fb_key_age",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
-    "stuck-spec"
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -236,18 +280,32 @@
    "missing_specs_last_finished": {
     "AFG_gadm1": "20260916"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_AFG_gadm1_20260916.csv.gz",
-     "spec": "AFG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 10,
    "logs_gb": 1.58,
    "finished_gb": 2.86,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 848,
+     "rows": 777024,
+     "imputed_1000": 129362,
+     "api_1000": 67097,
+     "zero": 0,
+     "placeholder": 456,
+     "nan": 1
+    },
+    "better": {
+     "files": 682,
+     "rows": 636975,
+     "imputed_1000": 0,
+     "api_1000": 17,
+     "zero": 33121,
+     "placeholder": 456,
+     "nan": 66783
+    }
+   },
    "db": {
     "vm_rows_7d": 485640,
     "db_rows_7d": 0,
@@ -257,9 +315,9 @@
   },
   {
    "collection": "dgg_subnational_fb_key_age_ins",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
-    "stuck-spec"
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -313,36 +371,36 @@
    },
    "current": null,
    "missing_specs_last_finished": {
-    "LBY_gadm1": "20260720",
+    "BRA_gadm1": "20260706",
     "AFG_gadm1": "20260916",
-    "BRA_gadm1": "20260706"
+    "LBY_gadm1": "20260720"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_AFG_gadm1_20260916.csv.gz",
-     "spec": "AFG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_BRA_gadm1_20260706.csv.gz",
-     "spec": "BRA_gadm1",
-     "stamp": "20260706",
-     "age_days": 106.5,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_LBY_gadm1_20260720.csv.gz",
-     "spec": "LBY_gadm1",
-     "stamp": "20260720",
-     "age_days": 91.6,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 3,
    "logs_gb": 0.95,
    "finished_gb": 1.03,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 832,
+     "rows": 755592,
+     "imputed_1000": 162734,
+     "api_1000": 83681,
+     "zero": 0,
+     "placeholder": 456,
+     "nan": 0
+    },
+    "better": {
+     "files": 753,
+     "rows": 710904,
+     "imputed_1000": 0,
+     "api_1000": 12,
+     "zero": 63437,
+     "placeholder": 0,
+     "nan": 50147
+    }
+   },
    "db": {
     "vm_rows_7d": 472245,
     "db_rows_7d": 0,
@@ -352,10 +410,10 @@
   },
   {
    "collection": "dgg_subnational_fb_key_device",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
     "partial-coverage",
-    "stuck-spec"
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -409,52 +467,38 @@
    },
    "current": null,
    "missing_specs_last_finished": {
+    "AGO_gadm1": "20260916",
     "TUR_gadm1": "20260706",
     "AFG_gadm1": "20260916",
-    "ARG_gadm1": "20260916",
     "TUV_gadm1": "20260716",
-    "AGO_gadm1": "20260916"
+    "ARG_gadm1": "20260916"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_AFG_gadm1_20260916.csv.gz",
-     "spec": "AFG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_AGO_gadm1_20260916.csv.gz",
-     "spec": "AGO_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_ARG_gadm1_20260916.csv.gz",
-     "spec": "ARG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_TUR_gadm1_20260706.csv.gz",
-     "spec": "TUR_gadm1",
-     "stamp": "20260706",
-     "age_days": 106.5,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_TUV_gadm1_20260716.csv.gz",
-     "spec": "TUV_gadm1",
-     "stamp": "20260716",
-     "age_days": 96.0,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 2,
    "logs_gb": 0.48,
    "finished_gb": 1.11,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 816,
+     "rows": 114336,
+     "imputed_1000": 9748,
+     "api_1000": 8073,
+     "zero": 0,
+     "placeholder": 72,
+     "nan": 0
+    },
+    "better": {
+     "files": 451,
+     "rows": 55629,
+     "imputed_1000": 0,
+     "api_1000": 5,
+     "zero": 4533,
+     "placeholder": 0,
+     "nan": 35
+    }
+   },
    "db": {
     "vm_rows_7d": 71460,
     "db_rows_7d": 0,
@@ -464,10 +508,10 @@
   },
   {
    "collection": "dgg_subnational_fb_key_device_ins",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
     "partial-coverage",
-    "stuck-spec"
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -522,59 +566,38 @@
    "current": null,
    "missing_specs_last_finished": {
     "THA_gadm1": "20260706",
+    "AGO_gadm1": "20260916",
     "TKM_gadm1": "20260716",
     "AFG_gadm1": "20260916",
     "ARG_gadm1": "20260916",
-    "TJK_gadm1": "20260709",
-    "AGO_gadm1": "20260916"
+    "TJK_gadm1": "20260709"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_AFG_gadm1_20260916.csv.gz",
-     "spec": "AFG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_AGO_gadm1_20260916.csv.gz",
-     "spec": "AGO_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_ARG_gadm1_20260916.csv.gz",
-     "spec": "ARG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_THA_gadm1_20260706.csv.gz",
-     "spec": "THA_gadm1",
-     "stamp": "20260706",
-     "age_days": 106.5,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_TJK_gadm1_20260709.csv.gz",
-     "spec": "TJK_gadm1",
-     "stamp": "20260709",
-     "age_days": 102.9,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_TKM_gadm1_20260716.csv.gz",
-     "spec": "TKM_gadm1",
-     "stamp": "20260716",
-     "age_days": 96.0,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 1,
    "logs_gb": 0.2,
    "finished_gb": 0.32,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 808,
+     "rows": 114120,
+     "imputed_1000": 15916,
+     "api_1000": 12951,
+     "zero": 0,
+     "placeholder": 72,
+     "nan": 0
+    },
+    "better": {
+     "files": 581,
+     "rows": 79533,
+     "imputed_1000": 0,
+     "api_1000": 1,
+     "zero": 8152,
+     "placeholder": 0,
+     "nan": 33
+    }
+   },
    "db": {
     "vm_rows_7d": 71325,
     "db_rows_7d": 0,
@@ -584,11 +607,11 @@
   },
   {
    "collection": "dgg_subnational_tessellated_age",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
     "partial-coverage",
-    "stuck-spec",
-    "log-intervention"
+    "log-intervention",
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -627,9 +650,9 @@
      "start": "2026-10-19 00:00:01",
      "end": null,
      "interrupted": false,
-     "hours": 38.0,
-     "coverage": 0.8623,
-     "missing_mau_share": 0.0944
+     "hours": 40.9,
+     "coverage": 0.9038,
+     "missing_mau_share": 0.0965
     }
    ],
    "median_run_hours": 39.15,
@@ -642,57 +665,43 @@
    },
    "current": {
     "start": "2026-10-19 00:00:01",
-    "hours_so_far": 38.0,
-    "coverage_so_far": 0.8623,
+    "hours_so_far": 40.9,
+    "coverage_so_far": 0.9038,
     "spec": null,
     "idle_hours": -0.1
    },
    "missing_specs_last_finished": {
+    "UKR_gadm1": "20260916",
     "VNM_gadm1": "20260928",
-    "MUS_gadm1": "20261001",
     "MNE_gadm1": "20260801",
-    "UKR_gadm1": "20260916"
+    "MUS_gadm1": "20261001"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_MNE_gadm1_20260801.csv.gz",
-     "spec": "MNE_gadm1",
-     "stamp": "20260801",
-     "age_days": 79.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_MUS_gadm1_20261001.csv.gz",
-     "spec": "MUS_gadm1",
-     "stamp": "20261001",
-     "age_days": 18.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_TUR_gadm1_20261020.csv.gz",
-     "spec": "TUR_gadm1",
-     "stamp": "20261020",
-     "age_days": -0.0,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_UKR_gadm1_20260916.csv.gz",
-     "spec": "UKR_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_VNM_gadm1_20260928.csv.gz",
-     "spec": "VNM_gadm1",
-     "stamp": "20260928",
-     "age_days": 22.0,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 0,
-   "logs_gb": 28.21,
-   "finished_gb": 47.15,
+   "logs_gb": 28.28,
+   "finished_gb": 47.16,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 484,
+     "rows": 483303,
+     "imputed_1000": 66942,
+     "api_1000": 42505,
+     "zero": 36,
+     "placeholder": 2280,
+     "nan": 0
+    },
+    "better": {
+     "files": 408,
+     "rows": 425220,
+     "imputed_1000": 0,
+     "api_1000": 2,
+     "zero": 7383,
+     "placeholder": 2280,
+     "nan": 46248
+    }
+   },
    "db": {
     "vm_rows_7d": 366624,
     "db_rows_7d": 0,
@@ -702,11 +711,11 @@
   },
   {
    "collection": "dgg_subnational_tessellated_age_ins",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
     "partial-coverage",
-    "stuck-spec",
-    "log-intervention"
+    "log-intervention",
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -743,77 +752,57 @@
     },
     {
      "start": "2026-10-19 00:00:06",
-     "end": null,
+     "end": "2026-10-20 16:52:42",
      "interrupted": false,
-     "hours": 38.0,
-     "coverage": 0.8919,
-     "missing_mau_share": 0.0741
+     "hours": 40.9,
+     "coverage": 0.9495,
+     "missing_mau_share": 0.0738
     }
    ],
    "median_run_hours": 37.9,
    "last_finished": {
-    "start": "2026-10-17 00:00:02",
-    "end": "2026-10-18 16:02:45",
+    "start": "2026-10-19 00:00:06",
+    "end": "2026-10-20 16:52:42",
     "coverage": 0.9495,
     "specs_done": 121,
     "specs_total": 126
    },
-   "current": {
-    "start": "2026-10-19 00:00:06",
-    "hours_so_far": 38.0,
-    "coverage_so_far": 0.8919,
-    "spec": null,
-    "idle_hours": -0.2
-   },
+   "current": null,
    "missing_specs_last_finished": {
     "VEN_gadm1": "20260916",
-    "NGA_gadm1": "20261001",
     "BTN_gadm1": "20260615",
-    "VCT_gadm1": "20260912",
-    "UKR_gadm1": "20261008"
+    "UKR_gadm1": "20261008",
+    "NGA_gadm1": "20261001",
+    "VCT_gadm1": "20260912"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_BTN_gadm1_20260615.csv.gz",
-     "spec": "BTN_gadm1",
-     "stamp": "20260615",
-     "age_days": 127.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_NGA_gadm1_20261001.csv.gz",
-     "spec": "NGA_gadm1",
-     "stamp": "20261001",
-     "age_days": 18.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_UKR_gadm1_20261008.csv.gz",
-     "spec": "UKR_gadm1",
-     "stamp": "20261008",
-     "age_days": 11.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_VCT_gadm1_20260912.csv.gz",
-     "spec": "VCT_gadm1",
-     "stamp": "20260912",
-     "age_days": 38.0,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_VEN_gadm1_20260916.csv.gz",
-     "spec": "VEN_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 0,
-   "logs_gb": 12.23,
-   "finished_gb": 13.96,
+   "logs_gb": 12.3,
+   "finished_gb": 13.97,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 484,
+     "rows": 488832,
+     "imputed_1000": 103230,
+     "api_1000": 53024,
+     "zero": 36,
+     "placeholder": 2280,
+     "nan": 0
+    },
+    "better": {
+     "files": 484,
+     "rows": 488832,
+     "imputed_1000": 0,
+     "api_1000": 0,
+     "zero": 34072,
+     "placeholder": 2280,
+     "nan": 36061
+    }
+   },
    "db": {
-    "vm_rows_7d": 366624,
+    "vm_rows_7d": 488832,
     "db_rows_7d": 0,
     "last_db_date": null,
     "share_in_db": 0.0
@@ -821,11 +810,11 @@
   },
   {
    "collection": "dgg_subnational_tessellated_device",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
     "partial-coverage",
-    "stuck-spec",
-    "log-intervention"
+    "log-intervention",
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -879,76 +868,41 @@
    },
    "current": null,
    "missing_specs_last_finished": {
-    "PRY_gadm1": "20260614",
-    "HTI_gadm1": "20260709",
-    "AFG_gadm1": "20260916",
-    "IDN_gadm1": "20260716",
-    "IND_gadm1": "20260718",
     "BWA_gadm1": "20260720",
-    "HND_gadm1": "20260706",
-    "AGO_gadm1": "20260916"
+    "PRY_gadm1": "20260614",
+    "AGO_gadm1": "20260916",
+    "IDN_gadm1": "20260716",
+    "AFG_gadm1": "20260916",
+    "IND_gadm1": "20260718",
+    "HTI_gadm1": "20260709",
+    "HND_gadm1": "20260706"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_AFG_gadm1_20260916.csv.gz",
-     "spec": "AFG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_AGO_gadm1_20260916.csv.gz",
-     "spec": "AGO_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_BWA_gadm1_20260720.csv.gz",
-     "spec": "BWA_gadm1",
-     "stamp": "20260720",
-     "age_days": 91.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_HND_gadm1_20260706.csv.gz",
-     "spec": "HND_gadm1",
-     "stamp": "20260706",
-     "age_days": 106.5,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_HTI_gadm1_20260709.csv.gz",
-     "spec": "HTI_gadm1",
-     "stamp": "20260709",
-     "age_days": 102.9,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_IDN_gadm1_20260716.csv.gz",
-     "spec": "IDN_gadm1",
-     "stamp": "20260716",
-     "age_days": 96.0,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_IND_gadm1_20260718.csv.gz",
-     "spec": "IND_gadm1",
-     "stamp": "20260718",
-     "age_days": 94.6,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_PRY_gadm1_20260614.csv.gz",
-     "spec": "PRY_gadm1",
-     "stamp": "20260614",
-     "age_days": 128.4,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 2,
    "logs_gb": 10.07,
    "finished_gb": 16.25,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 952,
+     "rows": 149976,
+     "imputed_1000": 9468,
+     "api_1000": 9379,
+     "zero": 217,
+     "placeholder": 720,
+     "nan": 0
+    },
+    "better": {
+     "files": 600,
+     "rows": 84987,
+     "imputed_1000": 0,
+     "api_1000": 6,
+     "zero": 2521,
+     "placeholder": 0,
+     "nan": 481
+    }
+   },
    "db": {
     "vm_rows_7d": 93735,
     "db_rows_7d": 0,
@@ -958,9 +912,9 @@
   },
   {
    "collection": "dgg_subnational_tessellated_device_ins",
-   "column": "stuck",
+   "column": "not-in-db",
    "flags": [
-    "stuck-spec"
+    "placeholder-rows"
    ],
    "runs": [
     {
@@ -1014,52 +968,38 @@
    },
    "current": null,
    "missing_specs_last_finished": {
-    "GRD_gadm1": "20260709",
+    "AGO_gadm1": "20260916",
     "AFG_gadm1": "20260916",
-    "GTM_gadm1": "20260716",
+    "GRD_gadm1": "20260709",
     "GNQ_gadm1": "20260706",
-    "AGO_gadm1": "20260916"
+    "GTM_gadm1": "20260716"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_AFG_gadm1_20260916.csv.gz",
-     "spec": "AFG_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_AGO_gadm1_20260916.csv.gz",
-     "spec": "AGO_gadm1",
-     "stamp": "20260916",
-     "age_days": 34.2,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_GNQ_gadm1_20260706.csv.gz",
-     "spec": "GNQ_gadm1",
-     "stamp": "20260706",
-     "age_days": 106.5,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_GRD_gadm1_20260709.csv.gz",
-     "spec": "GRD_gadm1",
-     "stamp": "20260709",
-     "age_days": 102.9,
-     "finished_exists": true
-    },
-    {
-     "file": "dataframe_collecting_GTM_gadm1_20260716.csv.gz",
-     "spec": "GTM_gadm1",
-     "stamp": "20260716",
-     "age_days": 96.0,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 0,
    "logs_gb": 4.36,
    "finished_gb": 5.87,
+   "sparse_7d": {
+    "window_days": 7,
+    "since": "2026-10-13",
+    "raw": {
+     "files": 968,
+     "rows": 156312,
+     "imputed_1000": 17736,
+     "api_1000": 16461,
+     "zero": 217,
+     "placeholder": 720,
+     "nan": 0
+    },
+    "better": {
+     "files": 785,
+     "rows": 124938,
+     "imputed_1000": 0,
+     "api_1000": 8,
+     "zero": 6119,
+     "placeholder": 720,
+     "nan": 473
+    }
+   },
    "db": {
     "vm_rows_7d": 97695,
     "db_rows_7d": 0,
