@@ -16,5 +16,23 @@
    "dgg_subnational_tessellated_device": "stuck",
    "dgg_subnational_tessellated_device_ins": "stuck"
   }
+ },
+ {
+  "date": "2026-10-20",
+  "disk_used_share": 0.6367,
+  "disk_used_gb": 197.36,
+  "logs_gb": 58.51,
+  "columns": {
+   "dgg_national": "not-in-db",
+   "dgg_national_ins": "not-in-db",
+   "dgg_subnational_fb_key_age": "stuck",
+   "dgg_subnational_fb_key_age_ins": "stuck",
+   "dgg_subnational_fb_key_device": "stuck",
+   "dgg_subnational_fb_key_device_ins": "stuck",
+   "dgg_subnational_tessellated_age": "stuck",
+   "dgg_subnational_tessellated_age_ins": "stuck",
+   "dgg_subnational_tessellated_device": "stuck",
+   "dgg_subnational_tessellated_device_ins": "stuck"
+  }
  }
 ]
