@@ -348,5 +348,171 @@
     }
    }
   }
+ },
+ {
+  "date": "2026-10-26",
+  "disk_used_share": 0.6471,
+  "disk_used_gb": 200.57,
+  "logs_gb": 59.57,
+  "columns": {
+   "dgg_national": "healthy",
+   "dgg_national_ins": "healthy",
+   "dgg_subnational_fb_key_age": "healthy",
+   "dgg_subnational_fb_key_age_ins": "healthy",
+   "dgg_subnational_fb_key_device": "healthy",
+   "dgg_subnational_fb_key_device_ins": "healthy",
+   "dgg_subnational_tessellated_age": "healthy",
+   "dgg_subnational_tessellated_age_ins": "healthy",
+   "dgg_subnational_tessellated_device": "healthy",
+   "dgg_subnational_tessellated_device_ins": "healthy"
+  },
+  "sparse_pct": {
+   "dgg_national": {
+    "raw": {
+     "imputed_1000": 0.0,
+     "api_1000": 22.9,
+     "zero": 0.0,
+     "placeholder": 0.0,
+     "nan": 0.0
+    }
+   },
+   "dgg_national_ins": {
+    "raw": {
+     "imputed_1000": 0.0,
+     "api_1000": 26.3,
+     "zero": 0.0,
+     "placeholder": 0.0,
+     "nan": 0.0
+    }
+   },
+   "dgg_subnational_fb_key_age": {
+    "raw": {
+     "imputed_1000": 16.7,
+     "api_1000": 8.8,
+     "zero": 0.0,
+     "placeholder": 0.1,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 5.3,
+     "placeholder": 0.1,
+     "nan": 10.5
+    }
+   },
+   "dgg_subnational_fb_key_age_ins": {
+    "raw": {
+     "imputed_1000": 21.2,
+     "api_1000": 11.2,
+     "zero": 0.0,
+     "placeholder": 0.1,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 8.7,
+     "placeholder": 0.0,
+     "nan": 7.0
+    }
+   },
+   "dgg_subnational_fb_key_device": {
+    "raw": {
+     "imputed_1000": 8.4,
+     "api_1000": 7.0,
+     "zero": 0.0,
+     "placeholder": 0.1,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 8.0,
+     "placeholder": 0.0,
+     "nan": 0.0
+    }
+   },
+   "dgg_subnational_fb_key_device_ins": {
+    "raw": {
+     "imputed_1000": 13.4,
+     "api_1000": 11.2,
+     "zero": 0.0,
+     "placeholder": 0.1,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 9.8,
+     "placeholder": 0.0,
+     "nan": 0.0
+    }
+   },
+   "dgg_subnational_tessellated_age": {
+    "raw": {
+     "imputed_1000": 13.7,
+     "api_1000": 8.7,
+     "zero": 0.0,
+     "placeholder": 1.0,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 1.7,
+     "placeholder": 0.5,
+     "nan": 10.9
+    }
+   },
+   "dgg_subnational_tessellated_age_ins": {
+    "raw": {
+     "imputed_1000": 21.0,
+     "api_1000": 10.8,
+     "zero": 0.0,
+     "placeholder": 0.5,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 6.7,
+     "placeholder": 0.5,
+     "nan": 7.6
+    }
+   },
+   "dgg_subnational_tessellated_device": {
+    "raw": {
+     "imputed_1000": 6.1,
+     "api_1000": 6.1,
+     "zero": 0.1,
+     "placeholder": 0.5,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 2.7,
+     "placeholder": 0.0,
+     "nan": 0.5
+    }
+   },
+   "dgg_subnational_tessellated_device_ins": {
+    "raw": {
+     "imputed_1000": 11.4,
+     "api_1000": 10.8,
+     "zero": 0.1,
+     "placeholder": 0.4,
+     "nan": 0.0
+    },
+    "better": {
+     "imputed_1000": 0.0,
+     "api_1000": 0.0,
+     "zero": 5.0,
+     "placeholder": 0.6,
+     "nan": 0.4
+    }
+   }
+  }
  }
 ]
