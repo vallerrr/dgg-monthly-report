@@ -1,24 +1,24 @@
 {
- "generated_at_utc": "2026-11-11 17:29:45",
- "vm_status_at_utc": "2026-11-11 17:24:08",
+ "generated_at_utc": "2026-11-12 10:19:58",
+ "vm_status_at_utc": "2026-11-12 10:15:34",
  "host": "dggcollectorsbig",
  "disk": {
   "total_gb": 309.95,
-  "used_gb": 206.13,
-  "free_gb": 103.8,
-  "used_share": 0.665,
+  "used_gb": 204.72,
+  "free_gb": 105.22,
+  "used_share": 0.6605,
   "breakdown_gb": {
-   "finished_data": 94.33,
-   "collector_logs": 61.16,
+   "finished_data": 94.51,
+   "collector_logs": 59.6,
    "crawler": 1.5,
    "docker": null,
-   "other": 49.14
+   "other": 49.11
   },
   "flags": [
    "log-intervention"
   ]
  },
- "db_checked": true,
+ "db_checked": false,
  "columns": [
   {
    "id": "down",
@@ -44,17 +44,9 @@
  "collections": [
   {
    "collection": "dgg_national",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:02",
-     "end": "2026-11-07 02:03:40",
-     "interrupted": false,
-     "hours": 2.1,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0
-    },
     {
      "start": "2026-11-08 00:00:08",
      "end": "2026-11-08 01:59:38",
@@ -86,12 +78,20 @@
      "hours": 2.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-12 00:00:04",
+     "end": "2026-11-12 02:15:20",
+     "interrupted": false,
+     "hours": 2.3,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
     }
    ],
    "median_run_hours": 2.05,
    "last_finished": {
-    "start": "2026-11-11 00:00:05",
-    "end": "2026-11-11 02:05:53",
+    "start": "2026-11-12 00:00:04",
+    "end": "2026-11-12 02:15:20",
     "coverage": 1.0,
     "specs_done": 3,
     "specs_total": 3
@@ -99,17 +99,17 @@
    "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 0,
+   "errors_in_log": 1,
    "logs_gb": 0.22,
    "finished_gb": 0.49,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
      "files": 24,
      "rows": 119560,
      "imputed_1000": 0,
-     "api_1000": 29419,
+     "api_1000": 29402,
      "zero": 0,
      "placeholder": 0,
      "nan": 0
@@ -124,26 +124,13 @@
      "nan": 0
     }
    },
-   "db": {
-    "vm_rows_7d": 74725,
-    "db_rows_7d": 14297,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.191
-   }
+   "db": null
   },
   {
    "collection": "dgg_national_ins",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:03",
-     "end": "2026-11-07 02:07:35",
-     "interrupted": false,
-     "hours": 2.1,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0
-    },
     {
      "start": "2026-11-08 00:00:03",
      "end": "2026-11-08 02:19:39",
@@ -175,12 +162,20 @@
      "hours": 2.2,
      "coverage": 1.0,
      "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-12 00:00:04",
+     "end": "2026-11-12 02:21:16",
+     "interrupted": false,
+     "hours": 2.4,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
     }
    ],
-   "median_run_hours": 2.2,
+   "median_run_hours": 2.25,
    "last_finished": {
-    "start": "2026-11-11 00:00:04",
-    "end": "2026-11-11 02:09:59",
+    "start": "2026-11-12 00:00:04",
+    "end": "2026-11-12 02:21:16",
     "coverage": 1.0,
     "specs_done": 3,
     "specs_total": 3
@@ -193,12 +188,12 @@
    "finished_gb": 0.47,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
      "files": 24,
      "rows": 123480,
      "imputed_1000": 0,
-     "api_1000": 34246,
+     "api_1000": 34248,
      "zero": 0,
      "placeholder": 0,
      "nan": 0
@@ -213,28 +208,15 @@
      "nan": 0
     }
    },
-   "db": {
-    "vm_rows_7d": 77175,
-    "db_rows_7d": 14873,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.193
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_fb_key_age",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:04",
-     "end": "2026-11-07 11:27:01",
-     "interrupted": false,
-     "hours": 11.4,
-     "coverage": 1.0,
-     "missing_mau_share": 0.084
-    },
     {
      "start": "2026-11-08 00:00:03",
      "end": "2026-11-08 11:43:56",
@@ -266,9 +248,17 @@
      "hours": 12.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0849
+    },
+    {
+     "start": "2026-11-12 00:00:03",
+     "end": null,
+     "interrupted": false,
+     "hours": 10.3,
+     "coverage": 0.8222,
+     "missing_mau_share": 0.0837
     }
    ],
-   "median_run_hours": 12.1,
+   "median_run_hours": 12.3,
    "last_finished": {
     "start": "2026-11-11 00:00:05",
     "end": "2026-11-11 12:07:12",
@@ -276,56 +266,49 @@
     "specs_done": 107,
     "specs_total": 107
    },
-   "current": null,
+   "current": {
+    "start": "2026-11-12 00:00:03",
+    "hours_so_far": 10.3,
+    "coverage_so_far": 0.8222,
+    "spec": "TUR_gadm1",
+    "idle_hours": -0.0
+   },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 2,
-   "logs_gb": 1.63,
-   "finished_gb": 2.97,
+   "errors_in_log": 1,
+   "logs_gb": 1.61,
+   "finished_gb": 2.98,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
-     "files": 856,
-     "rows": 792528,
-     "imputed_1000": 132972,
-     "api_1000": 72230,
+     "files": 844,
+     "rows": 774915,
+     "imputed_1000": 129326,
+     "api_1000": 70352,
      "zero": 0,
      "placeholder": 456,
      "nan": 0
     },
     "better": {
-     "files": 675,
-     "rows": 640794,
+     "files": 664,
+     "rows": 626487,
      "imputed_1000": 0,
      "api_1000": 3,
-     "zero": 34492,
+     "zero": 33622,
      "placeholder": 456,
-     "nan": 67171
+     "nan": 65491
     }
    },
-   "db": {
-    "vm_rows_7d": 495330,
-    "db_rows_7d": 199786,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.403
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_fb_key_age_ins",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:04",
-     "end": "2026-11-07 12:08:02",
-     "interrupted": false,
-     "hours": 12.1,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0648
-    },
     {
      "start": "2026-11-08 00:00:04",
      "end": "2026-11-08 12:31:05",
@@ -357,9 +340,17 @@
      "hours": 13.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0649
+    },
+    {
+     "start": "2026-11-12 00:00:05",
+     "end": null,
+     "interrupted": false,
+     "hours": 10.3,
+     "coverage": 0.8021,
+     "missing_mau_share": 0.0571
     }
    ],
-   "median_run_hours": 12.6,
+   "median_run_hours": 12.899999999999999,
    "last_finished": {
     "start": "2026-11-11 00:00:06",
     "end": "2026-11-11 13:05:46",
@@ -367,56 +358,49 @@
     "specs_done": 107,
     "specs_total": 107
    },
-   "current": null,
+   "current": {
+    "start": "2026-11-12 00:00:05",
+    "hours_so_far": 10.3,
+    "coverage_so_far": 0.8021,
+    "spec": "THA_gadm1",
+    "idle_hours": -0.0
+   },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 2,
-   "logs_gb": 1.01,
-   "finished_gb": 1.15,
+   "errors_in_log": 4,
+   "logs_gb": 0.99,
+   "finished_gb": 1.16,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
-     "files": 856,
-     "rows": 792528,
-     "imputed_1000": 164789,
-     "api_1000": 93979,
+     "files": 840,
+     "rows": 772920,
+     "imputed_1000": 160318,
+     "api_1000": 91312,
      "zero": 0,
-     "placeholder": 456,
+     "placeholder": 3012,
      "nan": 0
     },
     "better": {
-     "files": 777,
-     "rows": 733647,
+     "files": 758,
+     "rows": 706686,
      "imputed_1000": 0,
      "api_1000": 1,
-     "zero": 62777,
+     "zero": 61114,
      "placeholder": 0,
-     "nan": 51617
+     "nan": 49645
     }
    },
-   "db": {
-    "vm_rows_7d": 495330,
-    "db_rows_7d": 222950,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.45
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_fb_key_device",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:05",
-     "end": "2026-11-07 02:06:51",
-     "interrupted": false,
-     "hours": 2.1,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0001
-    },
     {
      "start": "2026-11-08 00:00:05",
      "end": "2026-11-08 02:13:33",
@@ -448,12 +432,20 @@
      "hours": 2.2,
      "coverage": 1.0,
      "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-12 00:00:06",
+     "end": "2026-11-12 02:08:11",
+     "interrupted": false,
+     "hours": 2.1,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
     }
    ],
-   "median_run_hours": 2.1500000000000004,
+   "median_run_hours": 2.2,
    "last_finished": {
-    "start": "2026-11-11 00:00:03",
-    "end": "2026-11-11 02:09:29",
+    "start": "2026-11-12 00:00:06",
+    "end": "2026-11-12 02:08:11",
     "coverage": 1.0,
     "specs_done": 107,
     "specs_total": 107
@@ -462,36 +454,31 @@
    "missing_specs_last_finished": {},
    "stuck_specs": [],
    "errors_in_log": 1,
-   "logs_gb": 0.49,
+   "logs_gb": 0.5,
    "finished_gb": 1.14,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
      "files": 856,
      "rows": 125136,
-     "imputed_1000": 10474,
-     "api_1000": 8837,
+     "imputed_1000": 10478,
+     "api_1000": 8803,
      "zero": 0,
      "placeholder": 72,
      "nan": 0
     },
     "better": {
-     "files": 468,
-     "rows": 59859,
+     "files": 465,
+     "rows": 59544,
      "imputed_1000": 0,
      "api_1000": 1,
-     "zero": 4966,
+     "zero": 4959,
      "placeholder": 0,
-     "nan": 65
+     "nan": 57
     }
    },
-   "db": {
-    "vm_rows_7d": 78210,
-    "db_rows_7d": 33661,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.43
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_fb_key_device_ins",
@@ -500,14 +487,6 @@
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:06",
-     "end": "2026-11-07 02:20:56",
-     "interrupted": false,
-     "hours": 2.3,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0015
-    },
     {
      "start": "2026-11-08 00:00:05",
      "end": "2026-11-08 02:17:16",
@@ -539,12 +518,20 @@
      "hours": 2.3,
      "coverage": 1.0,
      "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-12 00:00:05",
+     "end": "2026-11-12 02:18:28",
+     "interrupted": false,
+     "hours": 2.3,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
     }
    ],
    "median_run_hours": 2.3,
    "last_finished": {
-    "start": "2026-11-11 00:00:03",
-    "end": "2026-11-11 02:19:15",
+    "start": "2026-11-12 00:00:05",
+    "end": "2026-11-12 02:18:28",
     "coverage": 1.0,
     "specs_done": 107,
     "specs_total": 107
@@ -557,50 +544,36 @@
    "finished_gb": 0.35,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
      "files": 856,
      "rows": 125136,
-     "imputed_1000": 16624,
-     "api_1000": 13980,
+     "imputed_1000": 16584,
+     "api_1000": 13926,
      "zero": 0,
      "placeholder": 72,
      "nan": 0
     },
     "better": {
-     "files": 621,
-     "rows": 86994,
+     "files": 619,
+     "rows": 86742,
      "imputed_1000": 0,
      "api_1000": 3,
-     "zero": 7813,
+     "zero": 7725,
      "placeholder": 0,
-     "nan": 49
+     "nan": 48
     }
    },
-   "db": {
-    "vm_rows_7d": 78210,
-    "db_rows_7d": 44352,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.567
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_tessellated_age",
-   "column": "stuck",
+   "column": "healthy",
    "flags": [
-    "stuck-spec",
     "log-intervention",
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-01 23:30:44",
-     "end": "2026-11-03 19:51:46",
-     "interrupted": false,
-     "hours": 44.4,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0934
-    },
     {
      "start": "2026-11-04 00:00:05",
      "end": "2026-11-05 20:42:05",
@@ -627,88 +600,75 @@
     },
     {
      "start": "2026-11-10 00:00:07",
+     "end": "2026-11-11 22:35:49",
+     "interrupted": false,
+     "hours": 46.6,
+     "coverage": 0.9837,
+     "missing_mau_share": 0.096
+    },
+    {
+     "start": "2026-11-12 00:00:07",
      "end": null,
      "interrupted": false,
-     "hours": 41.4,
-     "coverage": 0.8459,
-     "missing_mau_share": 0.0937
+     "hours": 10.3,
+     "coverage": 0.2543,
+     "missing_mau_share": 0.0754
     }
    ],
-   "median_run_hours": 44.45,
+   "median_run_hours": 44.6,
    "last_finished": {
-    "start": "2026-11-08 00:00:06",
-    "end": "2026-11-09 20:30:29",
+    "start": "2026-11-10 00:00:07",
+    "end": "2026-11-11 22:35:49",
     "coverage": 0.9837,
     "specs_done": 126,
     "specs_total": 127
    },
    "current": {
-    "start": "2026-11-10 00:00:07",
-    "hours_so_far": 41.4,
-    "coverage_so_far": 0.8459,
-    "spec": "MEX_gadm1",
+    "start": "2026-11-12 00:00:07",
+    "hours_so_far": 10.3,
+    "coverage_so_far": 0.2543,
+    "spec": "PHL_gadm1",
     "idle_hours": -0.0
    },
    "missing_specs_last_finished": {
-    "NGA_gadm1": "20261101"
+    "NGA_gadm1": "20261112"
    },
-   "stuck_specs": [
-    {
-     "file": "dataframe_collecting_NGA_gadm1_20261101.csv.gz",
-     "spec": "NGA_gadm1",
-     "stamp": "20261101",
-     "age_days": 9.7,
-     "finished_exists": true
-    }
-   ],
+   "stuck_specs": [],
    "errors_in_log": 0,
-   "logs_gb": 29.14,
-   "finished_gb": 48.83,
+   "logs_gb": 28.36,
+   "finished_gb": 48.89,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
-     "files": 487,
-     "rows": 490200,
-     "imputed_1000": 69091,
-     "api_1000": 45138,
-     "zero": 36,
-     "placeholder": 4072,
+     "files": 477,
+     "rows": 480510,
+     "imputed_1000": 66861,
+     "api_1000": 44892,
+     "zero": 32,
+     "placeholder": 6816,
      "nan": 0
     },
     "better": {
-     "files": 410,
-     "rows": 425676,
+     "files": 400,
+     "rows": 413364,
      "imputed_1000": 0,
-     "api_1000": 4,
-     "zero": 8427,
+     "api_1000": 3,
+     "zero": 7416,
      "placeholder": 2280,
-     "nan": 46390
+     "nan": 44898
     }
    },
-   "db": {
-    "vm_rows_7d": 380988,
-    "db_rows_7d": 117978,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.31
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_tessellated_age_ins",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [
     "log-intervention",
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-01 23:30:44",
-     "end": "2026-11-03 19:11:13",
-     "interrupted": false,
-     "hours": 43.7,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0737
-    },
     {
      "start": "2026-11-04 00:00:07",
      "end": "2026-11-05 20:37:14",
@@ -735,78 +695,73 @@
     },
     {
      "start": "2026-11-10 00:00:08",
+     "end": "2026-11-11 23:09:34",
+     "interrupted": false,
+     "hours": 47.2,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0745
+    },
+    {
+     "start": "2026-11-12 00:00:07",
      "end": null,
      "interrupted": false,
-     "hours": 41.4,
-     "coverage": 0.8521,
-     "missing_mau_share": 0.074
+     "hours": 10.3,
+     "coverage": 0.2449,
+     "missing_mau_share": 0.0619
     }
    ],
-   "median_run_hours": 43.45,
+   "median_run_hours": 43.900000000000006,
    "last_finished": {
-    "start": "2026-11-08 00:00:07",
-    "end": "2026-11-09 19:11:39",
+    "start": "2026-11-10 00:00:08",
+    "end": "2026-11-11 23:09:34",
     "coverage": 1.0,
     "specs_done": 126,
     "specs_total": 126
    },
    "current": {
-    "start": "2026-11-10 00:00:08",
-    "hours_so_far": 41.4,
-    "coverage_so_far": 0.8521,
-    "spec": "MEX_gadm1",
+    "start": "2026-11-12 00:00:07",
+    "hours_so_far": 10.3,
+    "coverage_so_far": 0.2449,
+    "spec": "PHL_gadm1",
     "idle_hours": -0.0
    },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 0,
-   "logs_gb": 13.2,
-   "finished_gb": 15.79,
+   "errors_in_log": 1,
+   "logs_gb": 12.43,
+   "finished_gb": 15.85,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
-     "files": 487,
-     "rows": 495786,
-     "imputed_1000": 104366,
-     "api_1000": 54443,
-     "zero": 37,
-     "placeholder": 4072,
+     "files": 472,
+     "rows": 480909,
+     "imputed_1000": 101030,
+     "api_1000": 54229,
+     "zero": 33,
+     "placeholder": 5196,
      "nan": 0
     },
     "better": {
-     "files": 486,
-     "rows": 493962,
+     "files": 471,
+     "rows": 476292,
      "imputed_1000": 0,
-     "api_1000": 0,
-     "zero": 32887,
+     "api_1000": 1,
+     "zero": 31102,
      "placeholder": 2280,
-     "nan": 36545
+     "nan": 35069
     }
    },
-   "db": {
-    "vm_rows_7d": 386118,
-    "db_rows_7d": 149762,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.388
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_tessellated_device",
-   "column": "not-in-db",
+   "column": "healthy",
    "flags": [
     "log-intervention",
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:06",
-     "end": "2026-11-07 05:33:43",
-     "interrupted": false,
-     "hours": 5.6,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0028
-    },
     {
      "start": "2026-11-08 00:00:07",
      "end": "2026-11-08 05:30:48",
@@ -838,12 +793,20 @@
      "hours": 5.7,
      "coverage": 1.0,
      "missing_mau_share": 0.0026
+    },
+    {
+     "start": "2026-11-12 00:00:08",
+     "end": "2026-11-12 05:57:21",
+     "interrupted": false,
+     "hours": 6.0,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0029
     }
    ],
-   "median_run_hours": 5.6,
+   "median_run_hours": 5.65,
    "last_finished": {
-    "start": "2026-11-11 00:00:04",
-    "end": "2026-11-11 05:40:36",
+    "start": "2026-11-12 00:00:08",
+    "end": "2026-11-12 05:57:21",
     "coverage": 1.0,
     "specs_done": 127,
     "specs_total": 127
@@ -851,17 +814,17 @@
    "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 1,
-   "logs_gb": 10.39,
-   "finished_gb": 16.73,
+   "errors_in_log": 0,
+   "logs_gb": 10.4,
+   "finished_gb": 16.75,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
      "files": 1016,
      "rows": 163080,
-     "imputed_1000": 10034,
-     "api_1000": 10125,
+     "imputed_1000": 10042,
+     "api_1000": 10116,
      "zero": 217,
      "placeholder": 720,
      "nan": 0
@@ -871,17 +834,12 @@
      "rows": 99252,
      "imputed_1000": 0,
      "api_1000": 3,
-     "zero": 2886,
+     "zero": 2834,
      "placeholder": 0,
-     "nan": 488
+     "nan": 461
     }
    },
-   "db": {
-    "vm_rows_7d": 101925,
-    "db_rows_7d": 35620,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.349
-   }
+   "db": null
   },
   {
    "collection": "dgg_subnational_tessellated_device_ins",
@@ -890,14 +848,6 @@
     "placeholder-rows"
    ],
    "runs": [
-    {
-     "start": "2026-11-07 00:00:02",
-     "end": "2026-11-07 05:34:47",
-     "interrupted": false,
-     "hours": 5.6,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0027
-    },
     {
      "start": "2026-11-08 00:00:02",
      "end": "2026-11-08 05:31:11",
@@ -929,12 +879,20 @@
      "hours": 5.7,
      "coverage": 1.0,
      "missing_mau_share": 0.0027
+    },
+    {
+     "start": "2026-11-12 00:00:03",
+     "end": "2026-11-12 05:58:20",
+     "interrupted": false,
+     "hours": 6.0,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0028
     }
    ],
-   "median_run_hours": 5.6,
+   "median_run_hours": 5.65,
    "last_finished": {
-    "start": "2026-11-11 00:00:02",
-    "end": "2026-11-11 05:41:33",
+    "start": "2026-11-12 00:00:03",
+    "end": "2026-11-12 05:58:20",
     "coverage": 1.0,
     "specs_done": 126,
     "specs_total": 126
@@ -942,37 +900,32 @@
    "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 0,
-   "logs_gb": 4.65,
-   "finished_gb": 6.41,
+   "errors_in_log": 2,
+   "logs_gb": 4.66,
+   "finished_gb": 6.43,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-04",
+    "since": "2026-11-05",
     "raw": {
      "files": 1008,
      "rows": 162576,
-     "imputed_1000": 19020,
-     "api_1000": 17754,
+     "imputed_1000": 19000,
+     "api_1000": 17745,
      "zero": 216,
      "placeholder": 720,
      "nan": 0
     },
     "better": {
-     "files": 814,
-     "rows": 128628,
+     "files": 812,
+     "rows": 128106,
      "imputed_1000": 0,
-     "api_1000": 2,
-     "zero": 6655,
+     "api_1000": 1,
+     "zero": 6465,
      "placeholder": 720,
-     "nan": 463
+     "nan": 452
     }
    },
-   "db": {
-    "vm_rows_7d": 101610,
-    "db_rows_7d": 52453,
-    "last_db_date": "2026-11-10",
-    "share_in_db": 0.516
-   }
+   "db": null
   }
  ]
 }
