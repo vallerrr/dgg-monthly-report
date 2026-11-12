@@ -1,15 +1,15 @@
 {
- "generated_at_utc": "2026-11-12 10:19:58",
- "vm_status_at_utc": "2026-11-12 10:15:34",
+ "generated_at_utc": "2026-11-12 10:26:59",
+ "vm_status_at_utc": "2026-11-12 10:21:17",
  "host": "dggcollectorsbig",
  "disk": {
   "total_gb": 309.95,
-  "used_gb": 204.72,
-  "free_gb": 105.22,
+  "used_gb": 204.73,
+  "free_gb": 105.21,
   "used_share": 0.6605,
   "breakdown_gb": {
    "finished_data": 94.51,
-   "collector_logs": 59.6,
+   "collector_logs": 59.61,
    "crawler": 1.5,
    "docker": null,
    "other": 49.11
@@ -18,7 +18,7 @@
    "log-intervention"
   ]
  },
- "db_checked": false,
+ "db_checked": true,
  "columns": [
   {
    "id": "down",
@@ -124,7 +124,12 @@
      "nan": 0
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 74725,
+    "db_rows_7d": 100415,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.344
+   }
   },
   {
    "collection": "dgg_national_ins",
@@ -208,7 +213,12 @@
      "nan": 0
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 77175,
+    "db_rows_7d": 103770,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.345
+   }
   },
   {
    "collection": "dgg_subnational_fb_key_age",
@@ -253,9 +263,9 @@
      "start": "2026-11-12 00:00:03",
      "end": null,
      "interrupted": false,
-     "hours": 10.3,
-     "coverage": 0.8222,
-     "missing_mau_share": 0.0837
+     "hours": 10.4,
+     "coverage": 0.8613,
+     "missing_mau_share": 0.0799
     }
    ],
    "median_run_hours": 12.3,
@@ -268,8 +278,8 @@
    },
    "current": {
     "start": "2026-11-12 00:00:03",
-    "hours_so_far": 10.3,
-    "coverage_so_far": 0.8222,
+    "hours_so_far": 10.4,
+    "coverage_so_far": 0.8613,
     "spec": "TUR_gadm1",
     "idle_hours": -0.0
    },
@@ -282,12 +292,12 @@
     "window_days": 7,
     "since": "2026-11-05",
     "raw": {
-     "files": 844,
-     "rows": 774915,
+     "files": 845,
+     "rows": 778791,
      "imputed_1000": 129326,
      "api_1000": 70352,
      "zero": 0,
-     "placeholder": 456,
+     "placeholder": 4264,
      "nan": 0
     },
     "better": {
@@ -300,7 +310,12 @@
      "nan": 65491
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 396264,
+    "db_rows_7d": 694077,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.752
+   }
   },
   {
    "collection": "dgg_subnational_fb_key_age_ins",
@@ -345,7 +360,7 @@
      "start": "2026-11-12 00:00:05",
      "end": null,
      "interrupted": false,
-     "hours": 10.3,
+     "hours": 10.4,
      "coverage": 0.8021,
      "missing_mau_share": 0.0571
     }
@@ -360,7 +375,7 @@
    },
    "current": {
     "start": "2026-11-12 00:00:05",
-    "hours_so_far": 10.3,
+    "hours_so_far": 10.4,
     "coverage_so_far": 0.8021,
     "spec": "THA_gadm1",
     "idle_hours": -0.0
@@ -392,7 +407,12 @@
      "nan": 49645
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 396264,
+    "db_rows_7d": 693934,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.751
+   }
   },
   {
    "collection": "dgg_subnational_fb_key_device",
@@ -478,7 +498,12 @@
      "nan": 57
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 78210,
+    "db_rows_7d": 126211,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.614
+   }
   },
   {
    "collection": "dgg_subnational_fb_key_device_ins",
@@ -564,7 +589,12 @@
      "nan": 48
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 78210,
+    "db_rows_7d": 136130,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.741
+   }
   },
   {
    "collection": "dgg_subnational_tessellated_age",
@@ -610,7 +640,7 @@
      "start": "2026-11-12 00:00:07",
      "end": null,
      "interrupted": false,
-     "hours": 10.3,
+     "hours": 10.4,
      "coverage": 0.2543,
      "missing_mau_share": 0.0754
     }
@@ -625,7 +655,7 @@
    },
    "current": {
     "start": "2026-11-12 00:00:07",
-    "hours_so_far": 10.3,
+    "hours_so_far": 10.4,
     "coverage_so_far": 0.2543,
     "spec": "PHL_gadm1",
     "idle_hours": -0.0
@@ -659,7 +689,12 @@
      "nan": 44898
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 507984,
+    "db_rows_7d": 452937,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 0.892
+   }
   },
   {
    "collection": "dgg_subnational_tessellated_age_ins",
@@ -705,7 +740,7 @@
      "start": "2026-11-12 00:00:07",
      "end": null,
      "interrupted": false,
-     "hours": 10.3,
+     "hours": 10.4,
      "coverage": 0.2449,
      "missing_mau_share": 0.0619
     }
@@ -720,7 +755,7 @@
    },
    "current": {
     "start": "2026-11-12 00:00:07",
-    "hours_so_far": 10.3,
+    "hours_so_far": 10.4,
     "coverage_so_far": 0.2449,
     "spec": "PHL_gadm1",
     "idle_hours": -0.0
@@ -728,7 +763,7 @@
    "missing_specs_last_finished": {},
    "stuck_specs": [],
    "errors_in_log": 1,
-   "logs_gb": 12.43,
+   "logs_gb": 12.44,
    "finished_gb": 15.85,
    "sparse_7d": {
     "window_days": 7,
@@ -752,7 +787,12 @@
      "nan": 35069
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 514824,
+    "db_rows_7d": 459879,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 0.893
+   }
   },
   {
    "collection": "dgg_subnational_tessellated_device",
@@ -839,7 +879,12 @@
      "nan": 461
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 101925,
+    "db_rows_7d": 156153,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.532
+   }
   },
   {
    "collection": "dgg_subnational_tessellated_device_ins",
@@ -925,7 +970,12 @@
      "nan": 452
     }
    },
-   "db": null
+   "db": {
+    "vm_rows_7d": 101610,
+    "db_rows_7d": 172785,
+    "last_db_date": "2026-11-11",
+    "share_in_db": 1.7
+   }
   }
  ]
 }

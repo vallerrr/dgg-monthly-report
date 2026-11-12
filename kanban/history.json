@@ -850,8 +850,8 @@
  {
   "date": "2026-11-12",
   "disk_used_share": 0.6605,
-  "disk_used_gb": 204.72,
-  "logs_gb": 59.6,
+  "disk_used_gb": 204.73,
+  "logs_gb": 59.61,
   "columns": {
    "dgg_national": "healthy",
    "dgg_national_ins": "healthy",
@@ -885,10 +885,10 @@
    },
    "dgg_subnational_fb_key_age": {
     "raw": {
-     "imputed_1000": 16.7,
-     "api_1000": 9.1,
+     "imputed_1000": 16.6,
+     "api_1000": 9.0,
      "zero": 0.0,
-     "placeholder": 0.1,
+     "placeholder": 0.5,
      "nan": 0.0
     },
     "better": {
