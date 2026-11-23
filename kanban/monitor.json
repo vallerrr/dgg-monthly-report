@@ -1,18 +1,18 @@
 {
- "generated_at_utc": "2026-11-16 06:06:06",
- "vm_status_at_utc": "2026-11-16 06:00:02",
+ "generated_at_utc": "2026-11-23 06:04:53",
+ "vm_status_at_utc": "2026-11-23 06:00:02",
  "host": "dggcollectorsbig",
  "disk": {
   "total_gb": 309.95,
-  "used_gb": 204.5,
-  "free_gb": 105.44,
-  "used_share": 0.6598,
+  "used_gb": 205.22,
+  "free_gb": 104.71,
+  "used_share": 0.6621,
   "breakdown_gb": {
-   "finished_data": 95.2,
-   "collector_logs": 58.61,
+   "finished_data": 96.44,
+   "collector_logs": 58.21,
    "crawler": 1.5,
    "docker": null,
-   "other": 49.19
+   "other": 49.07
   },
   "flags": [
    "log-intervention"
@@ -48,50 +48,50 @@
    "flags": [],
    "runs": [
     {
-     "start": "2026-11-12 00:00:04",
-     "end": "2026-11-12 02:15:20",
+     "start": "2026-11-19 00:00:03",
+     "end": "2026-11-19 02:17:24",
      "interrupted": false,
      "hours": 2.3,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-13 00:00:06",
-     "end": "2026-11-13 02:25:13",
-     "interrupted": false,
-     "hours": 2.4,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0
-    },
-    {
-     "start": "2026-11-14 00:00:04",
-     "end": "2026-11-14 02:23:21",
-     "interrupted": false,
-     "hours": 2.4,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0
-    },
-    {
-     "start": "2026-11-15 00:00:03",
-     "end": "2026-11-15 02:21:38",
-     "interrupted": false,
-     "hours": 2.4,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0
-    },
-    {
-     "start": "2026-11-16 00:00:03",
-     "end": "2026-11-16 02:20:13",
+     "start": "2026-11-20 00:00:02",
+     "end": "2026-11-20 02:18:45",
      "interrupted": false,
      "hours": 2.3,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-21 00:00:03",
+     "end": "2026-11-21 02:31:13",
+     "interrupted": false,
+     "hours": 2.5,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-22 00:00:03",
+     "end": "2026-11-22 02:04:19",
+     "interrupted": false,
+     "hours": 2.1,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-23 00:00:03",
+     "end": "2026-11-23 02:07:06",
+     "interrupted": false,
+     "hours": 2.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     }
    ],
-   "median_run_hours": 2.4,
+   "median_run_hours": 2.3,
    "last_finished": {
-    "start": "2026-11-16 00:00:03",
-    "end": "2026-11-16 02:20:13",
+    "start": "2026-11-23 00:00:03",
+    "end": "2026-11-23 02:07:06",
     "coverage": 1.0,
     "specs_done": 3,
     "specs_total": 3
@@ -99,17 +99,17 @@
    "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 0,
+   "errors_in_log": 1,
    "logs_gb": 0.22,
    "finished_gb": 0.5,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
      "files": 24,
      "rows": 119560,
      "imputed_1000": 0,
-     "api_1000": 29369,
+     "api_1000": 29412,
      "zero": 0,
      "placeholder": 0,
      "nan": 0
@@ -132,50 +132,50 @@
    "flags": [],
    "runs": [
     {
-     "start": "2026-11-12 00:00:04",
-     "end": "2026-11-12 02:21:16",
+     "start": "2026-11-19 00:00:04",
+     "end": "2026-11-19 02:19:15",
+     "interrupted": false,
+     "hours": 2.3,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-20 00:00:03",
+     "end": "2026-11-20 02:25:53",
      "interrupted": false,
      "hours": 2.4,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-13 00:00:04",
-     "end": "2026-11-13 02:30:24",
+     "start": "2026-11-21 00:00:03",
+     "end": "2026-11-21 02:28:01",
      "interrupted": false,
      "hours": 2.5,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-14 00:00:04",
-     "end": "2026-11-14 02:25:02",
+     "start": "2026-11-22 00:00:04",
+     "end": "2026-11-22 02:08:21",
      "interrupted": false,
-     "hours": 2.4,
+     "hours": 2.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-15 00:00:03",
-     "end": "2026-11-15 02:23:45",
+     "start": "2026-11-23 00:00:03",
+     "end": "2026-11-23 02:10:19",
      "interrupted": false,
-     "hours": 2.4,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0
-    },
-    {
-     "start": "2026-11-16 00:00:05",
-     "end": "2026-11-16 02:21:42",
-     "interrupted": false,
-     "hours": 2.4,
+     "hours": 2.2,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     }
    ],
-   "median_run_hours": 2.4,
+   "median_run_hours": 2.3499999999999996,
    "last_finished": {
-    "start": "2026-11-16 00:00:05",
-    "end": "2026-11-16 02:21:42",
+    "start": "2026-11-23 00:00:03",
+    "end": "2026-11-23 02:10:19",
     "coverage": 1.0,
     "specs_done": 3,
     "specs_total": 3
@@ -183,17 +183,17 @@
    "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 1,
+   "errors_in_log": 0,
    "logs_gb": 0.22,
-   "finished_gb": 0.47,
+   "finished_gb": 0.48,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
      "files": 24,
      "rows": 123480,
      "imputed_1000": 0,
-     "api_1000": 34240,
+     "api_1000": 34260,
      "zero": 0,
      "placeholder": 0,
      "nan": 0
@@ -218,86 +218,86 @@
    ],
    "runs": [
     {
-     "start": "2026-11-12 00:00:03",
-     "end": "2026-11-12 12:33:43",
+     "start": "2026-11-19 00:00:04",
+     "end": "2026-11-19 14:26:11",
      "interrupted": false,
-     "hours": 12.6,
+     "hours": 14.4,
      "coverage": 1.0,
-     "missing_mau_share": 0.0826
+     "missing_mau_share": 0.0851
     },
     {
-     "start": "2026-11-13 00:00:06",
-     "end": "2026-11-13 14:38:54",
-     "interrupted": false,
-     "hours": 14.6,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0845
-    },
-    {
-     "start": "2026-11-14 00:00:05",
-     "end": "2026-11-14 12:47:11",
-     "interrupted": false,
-     "hours": 12.8,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0814
-    },
-    {
-     "start": "2026-11-15 00:00:04",
-     "end": "2026-11-15 14:19:45",
+     "start": "2026-11-20 00:00:04",
+     "end": "2026-11-20 14:16:35",
      "interrupted": false,
      "hours": 14.3,
      "coverage": 1.0,
-     "missing_mau_share": 0.0863
+     "missing_mau_share": 0.0847
     },
     {
-     "start": "2026-11-16 00:00:06",
+     "start": "2026-11-21 00:00:04",
+     "end": "2026-11-21 13:29:22",
+     "interrupted": false,
+     "hours": 13.5,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0823
+    },
+    {
+     "start": "2026-11-22 00:00:05",
+     "end": "2026-11-22 11:48:24",
+     "interrupted": false,
+     "hours": 11.8,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0893
+    },
+    {
+     "start": "2026-11-23 00:00:04",
      "end": null,
      "interrupted": false,
      "hours": 6.0,
-     "coverage": 0.4068,
-     "missing_mau_share": 0.0877
+     "coverage": 0.397,
+     "missing_mau_share": 0.0915
     }
    ],
-   "median_run_hours": 13.55,
+   "median_run_hours": 13.9,
    "last_finished": {
-    "start": "2026-11-15 00:00:04",
-    "end": "2026-11-15 14:19:45",
+    "start": "2026-11-22 00:00:05",
+    "end": "2026-11-22 11:48:24",
     "coverage": 1.0,
     "specs_done": 107,
     "specs_total": 107
    },
    "current": {
-    "start": "2026-11-16 00:00:06",
+    "start": "2026-11-23 00:00:04",
     "hours_so_far": 6.0,
-    "coverage_so_far": 0.4068,
-    "spec": "KEN_gadm1",
+    "coverage_so_far": 0.397,
+    "spec": "JOR_gadm1",
     "idle_hours": -0.0
    },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 3,
-   "logs_gb": 1.6,
-   "finished_gb": 2.99,
+   "errors_in_log": 0,
+   "logs_gb": 1.62,
+   "finished_gb": 3.02,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
-     "files": 799,
-     "rows": 733761,
-     "imputed_1000": 122885,
-     "api_1000": 64530,
+     "files": 690,
+     "rows": 633726,
+     "imputed_1000": 107296,
+     "api_1000": 55162,
      "zero": 0,
-     "placeholder": 456,
+     "placeholder": 759,
      "nan": 0
     },
     "better": {
-     "files": 626,
-     "rows": 588126,
+     "files": 555,
+     "rows": 519897,
      "imputed_1000": 0,
-     "api_1000": 3,
-     "zero": 33081,
-     "placeholder": 456,
-     "nan": 61835
+     "api_1000": 9,
+     "zero": 29302,
+     "placeholder": 399,
+     "nan": 55425
     }
    },
    "db": null
@@ -310,86 +310,86 @@
    ],
    "runs": [
     {
-     "start": "2026-11-12 00:00:05",
-     "end": "2026-11-12 13:04:14",
-     "interrupted": false,
-     "hours": 13.1,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0617
-    },
-    {
-     "start": "2026-11-13 00:00:07",
-     "end": "2026-11-13 13:11:05",
-     "interrupted": false,
-     "hours": 13.2,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0626
-    },
-    {
-     "start": "2026-11-14 00:00:03",
-     "end": "2026-11-14 14:17:05",
-     "interrupted": false,
-     "hours": 14.3,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0631
-    },
-    {
-     "start": "2026-11-15 00:00:04",
-     "end": "2026-11-15 14:01:58",
+     "start": "2026-11-19 00:00:05",
+     "end": "2026-11-19 13:57:37",
      "interrupted": false,
      "hours": 14.0,
      "coverage": 1.0,
-     "missing_mau_share": 0.0617
+     "missing_mau_share": 0.0651
     },
     {
-     "start": "2026-11-16 00:00:05",
+     "start": "2026-11-20 00:00:04",
+     "end": "2026-11-20 16:31:38",
+     "interrupted": false,
+     "hours": 16.5,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0657
+    },
+    {
+     "start": "2026-11-21 00:00:05",
+     "end": "2026-11-21 13:52:51",
+     "interrupted": false,
+     "hours": 13.9,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0629
+    },
+    {
+     "start": "2026-11-22 00:00:05",
+     "end": "2026-11-22 12:40:31",
+     "interrupted": false,
+     "hours": 12.7,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0657
+    },
+    {
+     "start": "2026-11-23 00:00:05",
      "end": null,
      "interrupted": false,
      "hours": 6.0,
-     "coverage": 0.4292,
-     "missing_mau_share": 0.0579
+     "coverage": 0.4517,
+     "missing_mau_share": 0.0655
     }
    ],
-   "median_run_hours": 13.6,
+   "median_run_hours": 13.95,
    "last_finished": {
-    "start": "2026-11-15 00:00:04",
-    "end": "2026-11-15 14:01:58",
+    "start": "2026-11-22 00:00:05",
+    "end": "2026-11-22 12:40:31",
     "coverage": 1.0,
     "specs_done": 107,
     "specs_total": 107
    },
    "current": {
-    "start": "2026-11-16 00:00:05",
+    "start": "2026-11-23 00:00:05",
     "hours_so_far": 6.0,
-    "coverage_so_far": 0.4292,
-    "spec": "LAO_gadm1",
+    "coverage_so_far": 0.4517,
+    "spec": "LBY_gadm1",
     "idle_hours": -0.0
    },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 3,
-   "logs_gb": 0.97,
-   "finished_gb": 1.18,
+   "errors_in_log": 0,
+   "logs_gb": 1.03,
+   "finished_gb": 1.21,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
-     "files": 802,
-     "rows": 735984,
-     "imputed_1000": 151853,
-     "api_1000": 84343,
+     "files": 805,
+     "rows": 738207,
+     "imputed_1000": 154644,
+     "api_1000": 83250,
      "zero": 0,
      "placeholder": 456,
      "nan": 0
     },
     "better": {
-     "files": 709,
-     "rows": 659262,
+     "files": 719,
+     "rows": 667527,
      "imputed_1000": 0,
-     "api_1000": 7,
-     "zero": 60674,
+     "api_1000": 1,
+     "zero": 59468,
      "placeholder": 0,
-     "nan": 46507
+     "nan": 47777
     }
    },
    "db": null
@@ -402,50 +402,50 @@
    ],
    "runs": [
     {
-     "start": "2026-11-12 00:00:06",
-     "end": "2026-11-12 02:08:11",
+     "start": "2026-11-19 00:00:06",
+     "end": "2026-11-19 02:11:54",
+     "interrupted": false,
+     "hours": 2.2,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0
+    },
+    {
+     "start": "2026-11-20 00:00:05",
+     "end": "2026-11-20 02:14:03",
+     "interrupted": false,
+     "hours": 2.2,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0003
+    },
+    {
+     "start": "2026-11-21 00:00:05",
+     "end": "2026-11-21 02:38:58",
+     "interrupted": false,
+     "hours": 2.6,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0018
+    },
+    {
+     "start": "2026-11-22 00:00:06",
+     "end": "2026-11-22 02:07:43",
      "interrupted": false,
      "hours": 2.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-13 00:00:05",
-     "end": "2026-11-13 02:27:26",
+     "start": "2026-11-23 00:00:05",
+     "end": "2026-11-23 02:06:03",
      "interrupted": false,
-     "hours": 2.5,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0004
-    },
-    {
-     "start": "2026-11-14 00:00:06",
-     "end": "2026-11-14 02:17:21",
-     "interrupted": false,
-     "hours": 2.3,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0002
-    },
-    {
-     "start": "2026-11-15 00:00:05",
-     "end": "2026-11-15 02:16:25",
-     "interrupted": false,
-     "hours": 2.3,
+     "hours": 2.1,
      "coverage": 1.0,
      "missing_mau_share": 0.0
-    },
-    {
-     "start": "2026-11-16 00:00:08",
-     "end": "2026-11-16 02:18:58",
-     "interrupted": false,
-     "hours": 2.3,
-     "coverage": 1.0,
-     "missing_mau_share": 0.001
     }
    ],
-   "median_run_hours": 2.3,
+   "median_run_hours": 2.2,
    "last_finished": {
-    "start": "2026-11-16 00:00:08",
-    "end": "2026-11-16 02:18:58",
+    "start": "2026-11-23 00:00:05",
+    "end": "2026-11-23 02:06:03",
     "coverage": 1.0,
     "specs_done": 107,
     "specs_total": 107
@@ -455,27 +455,27 @@
    "stuck_specs": [],
    "errors_in_log": 1,
    "logs_gb": 0.5,
-   "finished_gb": 1.14,
+   "finished_gb": 1.15,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
      "files": 856,
      "rows": 125136,
-     "imputed_1000": 10402,
-     "api_1000": 8645,
+     "imputed_1000": 10420,
+     "api_1000": 8601,
      "zero": 0,
      "placeholder": 72,
      "nan": 0
     },
     "better": {
-     "files": 459,
-     "rows": 59364,
+     "files": 457,
+     "rows": 59373,
      "imputed_1000": 0,
-     "api_1000": 1,
-     "zero": 4794,
+     "api_1000": 0,
+     "zero": 4713,
      "placeholder": 0,
-     "nan": 77
+     "nan": 126
     }
    },
    "db": null
@@ -488,50 +488,50 @@
    ],
    "runs": [
     {
-     "start": "2026-11-12 00:00:05",
-     "end": "2026-11-12 02:18:28",
+     "start": "2026-11-19 00:00:07",
+     "end": "2026-11-19 02:20:14",
      "interrupted": false,
      "hours": 2.3,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-13 00:00:03",
-     "end": "2026-11-13 02:36:47",
+     "start": "2026-11-20 00:00:07",
+     "end": "2026-11-20 02:39:42",
+     "interrupted": false,
+     "hours": 2.7,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0024
+    },
+    {
+     "start": "2026-11-21 00:00:06",
+     "end": "2026-11-21 02:37:25",
      "interrupted": false,
      "hours": 2.6,
      "coverage": 1.0,
      "missing_mau_share": 0.0012
     },
     {
-     "start": "2026-11-14 00:00:06",
-     "end": "2026-11-14 02:28:48",
+     "start": "2026-11-22 00:00:07",
+     "end": "2026-11-22 02:12:02",
      "interrupted": false,
-     "hours": 2.5,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0002
-    },
-    {
-     "start": "2026-11-15 00:00:06",
-     "end": "2026-11-15 02:22:35",
-     "interrupted": false,
-     "hours": 2.4,
+     "hours": 2.2,
      "coverage": 1.0,
      "missing_mau_share": 0.0
     },
     {
-     "start": "2026-11-16 00:00:07",
-     "end": "2026-11-16 02:23:10",
+     "start": "2026-11-23 00:00:06",
+     "end": "2026-11-23 02:11:30",
      "interrupted": false,
-     "hours": 2.4,
+     "hours": 2.2,
      "coverage": 1.0,
-     "missing_mau_share": 0.0005
+     "missing_mau_share": 0.0
     }
    ],
    "median_run_hours": 2.45,
    "last_finished": {
-    "start": "2026-11-16 00:00:07",
-    "end": "2026-11-16 02:23:10",
+    "start": "2026-11-23 00:00:06",
+    "end": "2026-11-23 02:11:30",
     "coverage": 1.0,
     "specs_done": 107,
     "specs_total": 107
@@ -539,29 +539,29 @@
    "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 1,
-   "logs_gb": 0.21,
-   "finished_gb": 0.35,
+   "errors_in_log": 0,
+   "logs_gb": 0.22,
+   "finished_gb": 0.36,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
      "files": 856,
      "rows": 125136,
-     "imputed_1000": 16468,
-     "api_1000": 13634,
+     "imputed_1000": 16582,
+     "api_1000": 13614,
      "zero": 0,
      "placeholder": 72,
      "nan": 0
     },
     "better": {
-     "files": 610,
-     "rows": 84924,
+     "files": 607,
+     "rows": 85410,
      "imputed_1000": 0,
-     "api_1000": 3,
-     "zero": 7638,
+     "api_1000": 6,
+     "zero": 7128,
      "placeholder": 0,
-     "nan": 54
+     "nan": 93
     }
    },
    "db": null
@@ -575,30 +575,6 @@
    ],
    "runs": [
     {
-     "start": "2026-11-06 00:00:05",
-     "end": "2026-11-07 19:02:07",
-     "interrupted": false,
-     "hours": 43.0,
-     "coverage": 0.9837,
-     "missing_mau_share": 0.0937
-    },
-    {
-     "start": "2026-11-08 00:00:06",
-     "end": "2026-11-09 20:30:29",
-     "interrupted": false,
-     "hours": 44.5,
-     "coverage": 0.9837,
-     "missing_mau_share": 0.0945
-    },
-    {
-     "start": "2026-11-10 00:00:07",
-     "end": "2026-11-11 22:35:49",
-     "interrupted": false,
-     "hours": 46.6,
-     "coverage": 0.9837,
-     "missing_mau_share": 0.096
-    },
-    {
      "start": "2026-11-12 00:00:07",
      "end": "2026-11-14 02:32:35",
      "interrupted": false,
@@ -608,53 +584,77 @@
     },
     {
      "start": "2026-11-15 00:00:06",
+     "end": "2026-11-16 23:00:32",
+     "interrupted": true,
+     "hours": 47.0,
+     "coverage": 0.932,
+     "missing_mau_share": 0.1015
+    },
+    {
+     "start": "2026-11-16 23:00:32",
+     "end": "2026-11-19 03:49:33",
+     "interrupted": false,
+     "hours": 52.8,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0995
+    },
+    {
+     "start": "2026-11-20 00:00:06",
+     "end": "2026-11-22 03:56:40",
+     "interrupted": false,
+     "hours": 51.9,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0989
+    },
+    {
+     "start": "2026-11-23 00:00:07",
      "end": null,
      "interrupted": false,
-     "hours": 30.0,
-     "coverage": 0.6044,
-     "missing_mau_share": 0.1007
+     "hours": 6.0,
+     "coverage": 0.1214,
+     "missing_mau_share": 0.094
     }
    ],
-   "median_run_hours": 45.55,
+   "median_run_hours": 51.9,
    "last_finished": {
-    "start": "2026-11-12 00:00:07",
-    "end": "2026-11-14 02:32:35",
+    "start": "2026-11-20 00:00:06",
+    "end": "2026-11-22 03:56:40",
     "coverage": 1.0,
     "specs_done": 127,
     "specs_total": 127
    },
    "current": {
-    "start": "2026-11-15 00:00:06",
-    "hours_so_far": 30.0,
-    "coverage_so_far": 0.6044,
-    "spec": null,
+    "start": "2026-11-23 00:00:07",
+    "hours_so_far": 6.0,
+    "coverage_so_far": 0.1214,
+    "spec": "BTN_gadm1",
     "idle_hours": -0.0
    },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
    "errors_in_log": 0,
-   "logs_gb": 27.85,
-   "finished_gb": 49.11,
+   "logs_gb": 27.47,
+   "finished_gb": 49.51,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
-     "files": 395,
-     "rows": 393642,
-     "imputed_1000": 56400,
-     "api_1000": 37422,
-     "zero": 26,
-     "placeholder": 1710,
+     "files": 330,
+     "rows": 332253,
+     "imputed_1000": 46782,
+     "api_1000": 32035,
+     "zero": 22,
+     "placeholder": 2830,
      "nan": 0
     },
     "better": {
-     "files": 340,
-     "rows": 351063,
+     "files": 290,
+     "rows": 302499,
      "imputed_1000": 0,
-     "api_1000": 1,
-     "zero": 7058,
+     "api_1000": 0,
+     "zero": 5728,
      "placeholder": 1710,
-     "nan": 38340
+     "nan": 33122
     }
    },
    "db": null
@@ -668,30 +668,6 @@
    ],
    "runs": [
     {
-     "start": "2026-11-06 00:00:06",
-     "end": "2026-11-07 19:08:43",
-     "interrupted": false,
-     "hours": 43.1,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0736
-    },
-    {
-     "start": "2026-11-08 00:00:07",
-     "end": "2026-11-09 19:11:39",
-     "interrupted": false,
-     "hours": 43.2,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0735
-    },
-    {
-     "start": "2026-11-10 00:00:08",
-     "end": "2026-11-11 23:09:34",
-     "interrupted": false,
-     "hours": 47.2,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0745
-    },
-    {
      "start": "2026-11-12 00:00:07",
      "end": "2026-11-14 00:06:22",
      "interrupted": false,
@@ -701,53 +677,77 @@
     },
     {
      "start": "2026-11-15 00:00:07",
+     "end": "2026-11-16 23:00:32",
+     "interrupted": true,
+     "hours": 47.0,
+     "coverage": 0.9318,
+     "missing_mau_share": 0.075
+    },
+    {
+     "start": "2026-11-16 23:00:32",
+     "end": "2026-11-19 04:08:34",
+     "interrupted": false,
+     "hours": 53.1,
+     "coverage": 1.0,
+     "missing_mau_share": 0.075
+    },
+    {
+     "start": "2026-11-20 00:00:07",
+     "end": "2026-11-22 01:34:33",
+     "interrupted": false,
+     "hours": 49.6,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0749
+    },
+    {
+     "start": "2026-11-23 00:00:08",
      "end": null,
      "interrupted": false,
-     "hours": 30.0,
-     "coverage": 0.6085,
-     "missing_mau_share": 0.0738
+     "hours": 6.0,
+     "coverage": 0.1098,
+     "missing_mau_share": 0.0759
     }
    ],
-   "median_run_hours": 45.2,
+   "median_run_hours": 49.6,
    "last_finished": {
-    "start": "2026-11-12 00:00:07",
-    "end": "2026-11-14 00:06:22",
+    "start": "2026-11-20 00:00:07",
+    "end": "2026-11-22 01:34:33",
     "coverage": 1.0,
     "specs_done": 126,
     "specs_total": 126
    },
    "current": {
-    "start": "2026-11-15 00:00:07",
-    "hours_so_far": 30.0,
-    "coverage_so_far": 0.6085,
-    "spec": null,
+    "start": "2026-11-23 00:00:08",
+    "hours_so_far": 6.0,
+    "coverage_so_far": 0.1098,
+    "spec": "BRA_gadm1",
     "idle_hours": -0.0
    },
    "missing_specs_last_finished": {},
    "stuck_specs": [],
    "errors_in_log": 0,
-   "logs_gb": 11.87,
-   "finished_gb": 16.09,
+   "logs_gb": 11.5,
+   "finished_gb": 16.51,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
-     "files": 396,
-     "rows": 396492,
-     "imputed_1000": 85298,
-     "api_1000": 44560,
-     "zero": 28,
-     "placeholder": 2358,
+     "files": 325,
+     "rows": 330828,
+     "imputed_1000": 70473,
+     "api_1000": 37937,
+     "zero": 22,
+     "placeholder": 1710,
      "nan": 0
     },
     "better": {
-     "files": 395,
-     "rows": 395466,
+     "files": 325,
+     "rows": 330828,
      "imputed_1000": 0,
      "api_1000": 2,
-     "zero": 27617,
+     "zero": 22198,
      "placeholder": 1710,
-     "nan": 29260
+     "nan": 24759
     }
    },
    "db": null
@@ -761,86 +761,80 @@
    ],
    "runs": [
     {
-     "start": "2026-11-12 00:00:08",
-     "end": "2026-11-12 05:57:21",
+     "start": "2026-11-19 00:00:07",
+     "end": "2026-11-19 06:14:56",
      "interrupted": false,
-     "hours": 6.0,
+     "hours": 6.2,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0039
+    },
+    {
+     "start": "2026-11-20 00:00:08",
+     "end": "2026-11-20 06:59:06",
+     "interrupted": false,
+     "hours": 7.0,
+     "coverage": 1.0,
+     "missing_mau_share": 0.007
+    },
+    {
+     "start": "2026-11-21 00:00:07",
+     "end": "2026-11-21 05:55:06",
+     "interrupted": false,
+     "hours": 5.9,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0034
+    },
+    {
+     "start": "2026-11-22 00:00:08",
+     "end": "2026-11-22 05:20:09",
+     "interrupted": false,
+     "hours": 5.3,
      "coverage": 1.0,
      "missing_mau_share": 0.0029
     },
     {
-     "start": "2026-11-13 00:00:03",
-     "end": "2026-11-13 05:59:28",
+     "start": "2026-11-23 00:00:08",
+     "end": "2026-11-23 06:00:17",
      "interrupted": false,
      "hours": 6.0,
      "coverage": 1.0,
-     "missing_mau_share": 0.0044
-    },
-    {
-     "start": "2026-11-14 00:00:07",
-     "end": "2026-11-14 05:51:01",
-     "interrupted": false,
-     "hours": 5.8,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0026
-    },
-    {
-     "start": "2026-11-15 00:00:08",
-     "end": "2026-11-15 06:20:06",
-     "interrupted": false,
-     "hours": 6.3,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0041
-    },
-    {
-     "start": "2026-11-16 00:00:09",
-     "end": null,
-     "interrupted": false,
-     "hours": 6.0,
-     "coverage": 0.9872,
-     "missing_mau_share": 0.0041
+     "missing_mau_share": 0.0033
     }
    ],
-   "median_run_hours": 6.0,
+   "median_run_hours": 6.050000000000001,
    "last_finished": {
-    "start": "2026-11-15 00:00:08",
-    "end": "2026-11-15 06:20:06",
+    "start": "2026-11-23 00:00:08",
+    "end": "2026-11-23 06:00:17",
     "coverage": 1.0,
     "specs_done": 127,
     "specs_total": 127
    },
-   "current": {
-    "start": "2026-11-16 00:00:09",
-    "hours_so_far": 6.0,
-    "coverage_so_far": 0.9872,
-    "spec": "YEM_gadm1",
-    "idle_hours": -0.0
-   },
+   "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
-   "errors_in_log": 1,
-   "logs_gb": 10.46,
-   "finished_gb": 16.84,
+   "errors_in_log": 0,
+   "logs_gb": 10.57,
+   "finished_gb": 17.0,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
-     "files": 1013,
-     "rows": 162819,
-     "imputed_1000": 10170,
-     "api_1000": 10212,
-     "zero": 218,
-     "placeholder": 909,
+     "files": 1016,
+     "rows": 163080,
+     "imputed_1000": 10370,
+     "api_1000": 10449,
+     "zero": 217,
+     "placeholder": 720,
      "nan": 0
     },
     "better": {
-     "files": 657,
-     "rows": 101097,
+     "files": 675,
+     "rows": 105534,
      "imputed_1000": 0,
-     "api_1000": 3,
-     "zero": 2850,
+     "api_1000": 1,
+     "zero": 2682,
      "placeholder": 0,
-     "nan": 548
+     "nan": 709
     }
    },
    "db": null
@@ -853,86 +847,80 @@
    ],
    "runs": [
     {
-     "start": "2026-11-12 00:00:03",
-     "end": "2026-11-12 05:58:20",
+     "start": "2026-11-19 00:00:03",
+     "end": "2026-11-19 06:16:08",
      "interrupted": false,
-     "hours": 6.0,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0028
-    },
-    {
-     "start": "2026-11-13 00:00:02",
-     "end": "2026-11-13 06:00:28",
-     "interrupted": false,
-     "hours": 6.0,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0027
-    },
-    {
-     "start": "2026-11-14 00:00:02",
-     "end": "2026-11-14 05:52:06",
-     "interrupted": false,
-     "hours": 5.9,
-     "coverage": 1.0,
-     "missing_mau_share": 0.0027
-    },
-    {
-     "start": "2026-11-15 00:00:02",
-     "end": "2026-11-15 06:33:35",
-     "interrupted": false,
-     "hours": 6.6,
+     "hours": 6.3,
      "coverage": 1.0,
      "missing_mau_share": 0.0038
     },
     {
-     "start": "2026-11-16 00:00:04",
-     "end": null,
+     "start": "2026-11-20 00:00:02",
+     "end": "2026-11-20 07:24:03",
+     "interrupted": false,
+     "hours": 7.4,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0062
+    },
+    {
+     "start": "2026-11-21 00:00:02",
+     "end": "2026-11-21 05:56:26",
+     "interrupted": false,
+     "hours": 5.9,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0036
+    },
+    {
+     "start": "2026-11-22 00:00:02",
+     "end": "2026-11-22 05:21:12",
+     "interrupted": false,
+     "hours": 5.4,
+     "coverage": 1.0,
+     "missing_mau_share": 0.0027
+    },
+    {
+     "start": "2026-11-23 00:00:02",
+     "end": "2026-11-23 05:57:49",
      "interrupted": false,
      "hours": 6.0,
-     "coverage": 0.9703,
-     "missing_mau_share": 0.0041
+     "coverage": 1.0,
+     "missing_mau_share": 0.0031
     }
    ],
-   "median_run_hours": 6.0,
+   "median_run_hours": 6.1,
    "last_finished": {
-    "start": "2026-11-15 00:00:02",
-    "end": "2026-11-15 06:33:35",
+    "start": "2026-11-23 00:00:02",
+    "end": "2026-11-23 05:57:49",
     "coverage": 1.0,
     "specs_done": 126,
     "specs_total": 126
    },
-   "current": {
-    "start": "2026-11-16 00:00:04",
-    "hours_so_far": 6.0,
-    "coverage_so_far": 0.9703,
-    "spec": "VNM_gadm1",
-    "idle_hours": -0.0
-   },
+   "current": null,
    "missing_specs_last_finished": {},
    "stuck_specs": [],
    "errors_in_log": 2,
-   "logs_gb": 4.71,
-   "finished_gb": 6.53,
+   "logs_gb": 4.86,
+   "finished_gb": 6.7,
    "sparse_7d": {
     "window_days": 7,
-    "since": "2026-11-09",
+    "since": "2026-11-16",
     "raw": {
-     "files": 1002,
-     "rows": 161973,
-     "imputed_1000": 19012,
-     "api_1000": 17814,
-     "zero": 217,
-     "placeholder": 1098,
+     "files": 1008,
+     "rows": 162576,
+     "imputed_1000": 19544,
+     "api_1000": 18261,
+     "zero": 216,
+     "placeholder": 720,
      "nan": 0
     },
     "better": {
-     "files": 810,
-     "rows": 127107,
+     "files": 827,
+     "rows": 131040,
      "imputed_1000": 0,
-     "api_1000": 3,
-     "zero": 6233,
+     "api_1000": 10,
+     "zero": 5780,
      "placeholder": 720,
-     "nan": 504
+     "nan": 664
     }
    },
    "db": null
