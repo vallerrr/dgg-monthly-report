@@ -102,21 +102,29 @@ async function renderChart() {
   const red = css("--kb-critical"), grey = css("--kb-other");
   const flagColor = (f) => (f === 3 ? red : f === 1 ? css("--kb-warning") : f === 2 ? grey : "transparent");
   const datasets = [];
+  // marker per column: only on the column that triggered the flag (data/national/series.json <var>_flag; older
+  // payloads without it mark every column). Flag 2 (between-country month, country fine) is marked on all columns.
+  const marks = (v) => s.flag.map((f, k) => {
+    const own = s[`${v}_flag`] ? s[`${v}_flag`][k] : f;
+    return own || (f === 2 ? 2 : 0);
+  });
   vars.forEach((v, i) => {
     const color = css(PALETTE[i % PALETTE.length]);
     if (!s[v]) return;
+    const m = marks(v);
     datasets.push({
       label: shortVar(v), data: s[v], borderColor: color, backgroundColor: color, borderWidth: 1.6, spanGaps: true,
-      pointRadius: s.flag.map((f, k) => (f ? 4 : labels[k] === state.month ? 3 : 0)),
-      pointBackgroundColor: s.flag.map((f) => (f ? flagColor(f) : color)),
-      pointBorderColor: s.flag.map((f) => (f ? flagColor(f) : color)),
+      pointRadius: m.map((f, k) => (f ? 4 : labels[k] === state.month ? 3 : 0)),
+      pointBackgroundColor: m.map((f) => (f ? flagColor(f) : color)),
+      pointBorderColor: m.map((f) => (f ? flagColor(f) : color)),
     });
     if (state.kind === "fb" && s[`${v}_baseline`]) {
       datasets.push({ label: `${shortVar(v)} baseline`, data: s[`${v}_baseline`], borderColor: color, borderDash: [4, 3],
         borderWidth: 1, pointRadius: 0, spanGaps: true });
     }
   });
-  note.textContent = "Coloured points: outlier months (yellow within country, red both, grey between-country month)." +
+  note.textContent = "Coloured points: outlier months, on the column that moved (yellow within country, red both, " +
+    "grey between-country month without a change in this country)." +
     (state.kind === "fb" ? " Dashed: rolling baseline." : "");
   const cfg = {
     type: "line", data: { labels, datasets },
@@ -124,8 +132,10 @@ async function renderChart() {
       responsive: true, maintainAspectRatio: false, animation: false, interaction: { mode: "index", intersect: false },
       scales: { y: { beginAtZero: false }, x: { ticks: { maxTicksLimit: 14 } } },
       plugins: { tooltip: { callbacks: { afterTitle: (items) => {
-        const f = s.flag[items[0].dataIndex];
-        return f ? `outlier flag ${f}` : "";
+        const k = items[0].dataIndex, f = s.flag[k];
+        if (!f) return "";
+        const hit = vars.filter((v) => s[`${v}_flag`] && s[`${v}_flag`][k]).map(shortVar);
+        return `outlier flag ${f}` + (hit.length ? ` (${hit.join(", ")})` : "");
       } } } },
     },
   };
