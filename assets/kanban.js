@@ -301,7 +301,7 @@ function nationalBars(block, label) {
   for (const m of months) {
     const bar = el("div", { class: `bar${m.between_flag ? " between" : ""}${m.label === label ? " current" : ""}`,
       style: `height:${Math.max((m.n_deviating / max) * 100, 2)}%` }, el("div", { class: "hit" }));
-    attachTip(bar, `<b>${m.label}</b><br>${m.n_deviating} of ${m.n_units} countries deviating<br>` +
+    attachTip(bar, `<b>${m.label}</b><br>${m.n_deviating} of ${m.n_counted ?? m.n_units} countries deviating<br>` +
       `${m.n_within} within-country outliers${m.between_flag ? "<br><b>between-country outlier</b>" : ""}`);
     box.append(bar);
   }
@@ -314,8 +314,10 @@ function nationalCard(nat, kind, title) {
   const b = nat[kind], s = b.summary, t = b.thresholds;
   const card = el("article", { class: "kb-card" }, el("h3", {}, `${title} · ${nat.selected_month.label}`));
   card.append(el("div", { class: "row" }, `Countries deviating > ${Math.round(t.between_dev * 100)}%`,
-    el("b", {}, `${s.n_deviating} / ${s.n_units} (X = ${t.between_min_countries})`)));
+    el("b", {}, `${s.n_deviating} / ${s.n_counted} (X = ${t.between_min_countries})`)));
   card.append(el("div", { class: "row" }, `Within-country (> ${Math.round(t.within_dev * 100)}%)`, el("b", {}, String(s.n_within))));
+  if (t.small_baseline) card.append(el("div", { class: "row" }, `Small units (> ${Math.round(t.small_within_dev * 100)}%, not counted)`,
+    el("b", {}, String(s.n_small))));
   const earlier = b.months.filter((m) => m.between_flag && m.label !== nat.selected_month.label).map((m) => m.label);
   if (earlier.length) card.append(el("div", { class: "row" }, "Earlier between-country months",
     el("b", { title: earlier.join(", ") }, String(earlier.length))));

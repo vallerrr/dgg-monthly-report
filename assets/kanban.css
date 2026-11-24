@@ -207,3 +207,5 @@
 .nat-dev-neg { color: var(--kb-critical); }
 
 .page-actions .btn-link + .btn-link { margin-left: 14px; }
+.nat-small { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 10px; font-weight: 400; color: var(--muted); }

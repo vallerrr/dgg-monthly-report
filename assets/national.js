@@ -41,8 +41,10 @@ function renderCards() {
       el("div", { class: "label" }, `${KIND_LABEL[kind]} · ${state.payload.selected_month.label}`),
       el("div", { class: "value" }, s.between_flag ? "Between-country outlier" : s.n_within ? `${s.n_within} within-country` : "No outliers"),
       el("div", { class: "muted kb-small" },
-        `${s.n_deviating} of ${s.n_units} countries deviate > ${Math.round(t.between_dev * 100)}% ` +
-        `(between if > ${t.between_min_countries}); within threshold ${Math.round(t.within_dev * 100)}%`));
+        `${s.n_deviating} of ${s.n_counted} countries deviate > ${Math.round(t.between_dev * 100)}% ` +
+        `(between if > ${t.between_min_countries}); within threshold ${Math.round(t.within_dev * 100)}%` +
+        (t.small_baseline ? `; ${s.n_small} small units (< ${t.small_baseline.toLocaleString("en-GB")} users) ` +
+          `checked at ${Math.round(t.small_within_dev * 100)}% and left out of the between count` : "")));
     box.append(card);
   }
 }
@@ -62,7 +64,8 @@ function renderTable() {
   const body = el("tbody");
   for (const r of rows) {
     const tr = el("tr", { class: `nat-row${r.country === state.country ? " selected" : ""}` },
-      el("th", { class: "name", scope: "row" }, r.country),
+      el("th", { class: "name", scope: "row" }, r.country,
+        r.small ? el("span", { class: "nat-small", title: "small unit: looser threshold, not in the between count" }, "small") : null),
       el("td", {}, el("span", { class: `nat-flag f${r.flag}` }, String(r.flag))),
       el("td", { class: "num" }, r.max_abs_dev == null ? "–" : `${(r.max_abs_dev * 100).toFixed(1)}%`),
       vars.map((v) => {
