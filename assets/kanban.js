@@ -1,5 +1,5 @@
-// DGG kanban: reads kanban/monitor.json, kanban/history.json (written by dgg_pipeline/main_monitor.py)
-// and data/index.json (monthly report pages)
+// DGG kanban: reads kanban/monitor.json, kanban/history.json (written by dgg_pipeline/main_monitor.py),
+// data/index.json (monthly report pages) and the latest data/national/<YYYY-MM>.json (national outlier checks)
 
 const STATUS = {
   down: { tone: "critical", icon: "✕" },
@@ -284,8 +284,78 @@ function renderSparseTable(m) {
   draw();
 }
 
+// ---------------------------------------------------------------- national outputs
+const NAT_KINDS = [["fb", "National FB counts"], ["model", "National model"]];
+const NAT_COLS = [
+  ["healthy", "No outliers", "good", "✓"],
+  ["within", "Within-country outliers", "warning", "!"],
+  ["between", "Between-country outlier", "critical", "✕"],
+];
+const natStatus = (s) => (!s ? null : s.between_flag ? "between" : s.n_within ? "within" : "healthy");
+
+function nationalBars(block, label) {
+  const months = block.months.slice(-36);
+  const x = block.thresholds.between_min_countries;
+  const max = Math.max(...months.map((m) => m.n_deviating), x * 1.2, 1);
+  const box = el("div", { class: "kb-ndev", role: "img", "aria-label": `Countries deviating per month, last ${months.length} months` });
+  for (const m of months) {
+    const bar = el("div", { class: `bar${m.between_flag ? " between" : ""}${m.label === label ? " current" : ""}`,
+      style: `height:${Math.max((m.n_deviating / max) * 100, 2)}%` }, el("div", { class: "hit" }));
+    attachTip(bar, `<b>${m.label}</b><br>${m.n_deviating} of ${m.n_units} countries deviating<br>` +
+      `${m.n_within} within-country outliers${m.between_flag ? "<br><b>between-country outlier</b>" : ""}`);
+    box.append(bar);
+  }
+  box.append(el("div", { class: "xline", style: `bottom:${(x / max) * 100}%` }));
+  return [box, el("div", { class: "kb-runs-note" }, el("span", {}, months[0]?.label || ""), el("span", {}, `X = ${x}`),
+    el("span", {}, months[months.length - 1]?.label || ""))];
+}
+
+function nationalCard(nat, kind, title) {
+  const b = nat[kind], s = b.summary, t = b.thresholds;
+  const card = el("article", { class: "kb-card" }, el("h3", {}, `${title} · ${nat.selected_month.label}`));
+  card.append(el("div", { class: "row" }, `Countries deviating > ${Math.round(t.between_dev * 100)}%`,
+    el("b", {}, `${s.n_deviating} / ${s.n_units} (X = ${t.between_min_countries})`)));
+  card.append(el("div", { class: "row" }, `Within-country (> ${Math.round(t.within_dev * 100)}%)`, el("b", {}, String(s.n_within))));
+  const earlier = b.months.filter((m) => m.between_flag && m.label !== nat.selected_month.label).map((m) => m.label);
+  if (earlier.length) card.append(el("div", { class: "row" }, "Earlier between-country months",
+    el("b", { title: earlier.join(", ") }, String(earlier.length))));
+  card.append(...nationalBars(b, nat.selected_month.label));
+  if (s.within_countries.length) {
+    card.append(el("div", { class: "tags" }, s.within_countries.slice(0, 16).map((c) =>
+      el("a", { class: "tag", href: `national.html?kind=${kind}&country=${encodeURIComponent(c)}` }, c)),
+      s.within_countries.length > 16 ? el("span", { class: "tag" }, `+${s.within_countries.length - 16}`) : null));
+  }
+  card.append(el("a", { class: "gadm-link", href: `national.html?kind=${kind}` }, "Open national page →"));
+  return card;
+}
+
+function renderNational(nat) {
+  const board = document.getElementById("kb-national");
+  if (!nat) {
+    board.replaceWith(el("p", { class: "muted kb-small" }, "No national outlier data yet (stage national_outliers)."));
+    return;
+  }
+  for (const [id, label, tone, icon] of NAT_COLS) {
+    const items = NAT_KINDS.filter(([k]) => natStatus(nat[k].summary) === id);
+    board.append(el("div", { class: "kb-col" },
+      el("div", { class: "kb-col-head" }, el("span", { class: `kb-status-icon ${tone}` }, icon), label,
+        el("span", { class: "count" }, String(items.length))),
+      items.map(([k, title]) => nationalCard(nat, k, title))));
+  }
+}
+
+function nationalMonthNote(nat, label) {
+  if (!nat) return null;
+  const parts = NAT_KINDS.map(([k, title]) => {
+    const m = nat[k].months.find((x) => x.label === label);
+    if (!m) return null;
+    return m.between_flag ? `${title.replace("National ", "")}: between` : m.n_within ? `${title.replace("National ", "")}: ${m.n_within}` : null;
+  }).filter(Boolean);
+  return el("div", { class: "row" }, "National outliers", el("b", {}, parts.length ? parts.join(" · ") : "none"));
+}
+
 // ---------------------------------------------------------------- monthly report board
-function renderMonths(index, m) {
+function renderMonths(index, m, nat) {
   const board = document.getElementById("kb-months");
   const published = new Set((index?.months || []).map((x) => x.label));
   const now = new Date();
@@ -305,7 +375,10 @@ function renderMonths(index, m) {
         el("span", { class: "count" }, String(months.length))),
       months.map((mo) => {
         const card = el("article", { class: "kb-card" }, el("h3", {}, mo));
-        if (title === "Report published") card.append(el("a", { class: "gadm-link", href: "index.html" }, "Open report"));
+        if (title === "Report published") {
+          card.append(nationalMonthNote(nat, mo));
+          card.append(el("a", { class: "gadm-link", href: "index.html" }, "Open report"));
+        }
         if (title.startsWith("Waiting") && dbGap) card.append(el("div", { class: "row" }, "Blocked by", el("b", {}, "DB upload gap")));
         return card;
       })));
@@ -316,9 +389,12 @@ function renderMonths(index, m) {
 (async function main() {
   const [monitor, history, index] = await Promise.all([
     getJSON("kanban/monitor.json"), getJSON("kanban/history.json"), getJSON("data/index.json")]);
+  const natEntry = (index?.months || []).find((x) => x.national_file);
+  const nat = natEntry ? await getJSON(`data/${natEntry.national_file}`) : null;
+  renderNational(nat);
   if (!monitor) {
     document.getElementById("kb-meta").textContent = "No monitor data yet: run main_monitor.py in dgg_pipeline.";
-    renderMonths(index, null);
+    renderMonths(index, null, nat);
     return;
   }
   document.getElementById("kb-meta").textContent =
@@ -327,6 +403,6 @@ function renderMonths(index, m) {
   renderVM(monitor, history);
   renderBoard(monitor);
   renderSparseTable(monitor);
-  renderMonths(index, monitor);
+  renderMonths(index, monitor, nat);
   document.getElementById("kb-footer").textContent = `Generated ${monitor.generated_at_utc} UTC by dgg_pipeline/main_monitor.py`;
 })();

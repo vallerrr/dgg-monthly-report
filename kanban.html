@@ -10,7 +10,7 @@
 <body class="kanban-page">
   <main class="container">
     <header class="header">
-      <div class="page-actions"><a class="btn-link" href="index.html">← Monthly report</a></div>
+      <div class="page-actions"><a class="btn-link" href="index.html">← Monthly report</a> <a class="btn-link" href="national.html">National outliers →</a></div>
       <h1>DGG Kanban</h1>
       <p class="muted" id="kb-meta">Collection monitor and monthly report status</p>
     </header>
@@ -47,6 +47,14 @@
         never asked Facebook. API 1000: Facebook's own floor, for context. 0: better-estimates subtraction gave 0.
         −1: placeholder row never collected. NaN: empty. Click a column to sort.</p>
       <div class="kb-table-wrap" id="kb-sparse-table"></div>
+    </section>
+
+    <section class="kb-section">
+      <h2>National outputs</h2>
+      <p class="muted kb-small" id="kb-national-note">Outlier checks of the national FB counts and the national model
+        outputs against each country's rolling 12-month baseline (its own outlier months left out). Between-country:
+        more than X countries deviate in the same month. Bars: countries deviating per month; dashed line: X.</p>
+      <div class="kb-board kb-board-national" id="kb-national"></div>
     </section>
 
     <section class="kb-section">

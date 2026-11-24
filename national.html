@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DGG National Outliers</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/kanban.css" />
+</head>
+<body class="kanban-page">
+  <main class="container">
+    <header class="header">
+      <div class="page-actions">
+        <a class="btn-link" href="index.html">← Monthly report</a>
+        <a class="btn-link" href="kanban.html">Kanban</a>
+      </div>
+      <h1>National outliers</h1>
+      <p class="muted" id="nat-meta">National FB counts and national model outputs against each country's rolling
+        12-month baseline.</p>
+    </header>
+
+    <section class="cards" id="nat-cards"></section>
+
+    <section class="nat-controls">
+      <div class="nat-tabs" role="group" aria-label="Data">
+        <button type="button" data-kind="fb" aria-pressed="true">FB counts</button>
+        <button type="button" data-kind="model" aria-pressed="false">Model outputs</button>
+      </div>
+      <label>Month <select id="nat-month"></select></label>
+      <label>Country <input id="nat-search" type="search" placeholder="ISO3, e.g. GBR" /></label>
+      <label>Show <select id="nat-filter">
+        <option value="flagged">Flagged only</option>
+        <option value="all">All countries</option>
+      </select></label>
+    </section>
+
+    <p class="muted kb-small" id="nat-legend">Flag: <span class="nat-flag f1">1</span> within country ·
+      <span class="nat-flag f2">2</span> between-country month (country itself fine) ·
+      <span class="nat-flag f3">3</span> both. Deviation = value / baseline − 1. Click a row for the time series.</p>
+
+    <section class="kb-table-wrap nat-table-wrap" id="nat-table"></section>
+
+    <section class="nat-charts">
+      <article class="card">
+        <h3 id="nat-chart-title">Select a country</h3>
+        <p class="muted kb-small" id="nat-chart-note"></p>
+        <div class="nat-chart-box"><canvas id="nat-chart"></canvas></div>
+      </article>
+    </section>
+
+    <footer class="footer" id="nat-footer"></footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/national.js"></script>
+</body>
+</html>

@@ -90,8 +90,9 @@
 /* boards */
 .kb-board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: start; }
 .kb-board-months { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-@media (max-width: 1000px) { .kb-board, .kb-board-months { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .kb-board, .kb-board-months { grid-template-columns: 1fr; } }
+.kb-board-national { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .kb-board, .kb-board-months, .kb-board-national { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .kb-board, .kb-board-months, .kb-board-national { grid-template-columns: 1fr; } }
 .kb-col { background: color-mix(in srgb, var(--line) 45%, transparent); border-radius: 10px; padding: 8px; min-height: 60px; }
 .kb-col-head { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin: 2px 2px 8px; }
 .kb-col-head .count { margin-left: auto; color: var(--muted); font-weight: 400; }
@@ -171,3 +172,38 @@
   background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: 6px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, .15); padding: 6px 8px; font-size: 12px; line-height: 1.4;
 }
+
+/* national outputs: countries deviating per month */
+.kb-ndev { display: flex; align-items: flex-end; gap: 1px; height: 46px; margin-top: 8px; position: relative;
+  border-bottom: 1px solid var(--kb-line); }
+.kb-ndev .bar { flex: 1; background: var(--kb-series-1); min-height: 1px; position: relative; border-radius: 2px 2px 0 0; }
+.kb-ndev .bar.between { background: var(--kb-critical); }
+.kb-ndev .bar.current { outline: 1px solid var(--kb-ink); }
+.kb-ndev .bar .hit { position: absolute; inset: -46px 0 0; }
+.kb-ndev .xline { position: absolute; left: 0; right: 0; border-top: 1px dashed var(--kb-ink-2); pointer-events: none; }
+.kb-card .gadm-link { display: inline-block; margin-top: 6px; }
+
+/* national page */
+.nat-flag { display: inline-block; min-width: 22px; text-align: center; border-radius: 999px; padding: 0 6px;
+  font-size: 11px; font-weight: 700; }
+.nat-flag.f0 { color: var(--muted); }
+.nat-flag.f1 { background: var(--kb-warning); color: #0b0b0b; }
+.nat-flag.f2 { background: var(--kb-other); color: #0b0b0b; }
+.nat-flag.f3 { background: var(--kb-critical); color: #fff; }
+.nat-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 14px 0; font-size: 13px; }
+.nat-controls label { display: flex; flex-direction: column; gap: 4px; color: var(--muted); }
+.nat-controls select, .nat-controls input { font: inherit; padding: 5px 8px; border: 1px solid var(--line);
+  border-radius: 6px; background: var(--card); color: var(--fg); }
+.nat-tabs { display: flex; gap: 6px; }
+.nat-tabs button { font: inherit; font-size: 13px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--card); color: var(--fg); cursor: pointer; }
+.nat-tabs button[aria-pressed="true"] { background: var(--kb-series-1); border-color: var(--kb-series-1); color: #fff; }
+.nat-table-wrap { max-height: 460px; overflow: auto; }
+.kb-table tbody tr.nat-row { cursor: pointer; }
+.kb-table tbody tr.nat-row.selected > * { background: color-mix(in srgb, var(--kb-series-1) 14%, var(--card)); }
+.nat-charts { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
+.nat-chart-box { position: relative; height: 300px; }
+.nat-dev-pos { color: var(--kb-series-1); }
+.nat-dev-neg { color: var(--kb-critical); }
+
+.page-actions .btn-link + .btn-link { margin-left: 14px; }
